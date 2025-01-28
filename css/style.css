@@ -10102,3 +10102,8 @@ textarea.form-control {
 			font-size: 15px !important;
 			cursor: pointer;
 		}
+    .description{
+      transform: translate(5px, 10px);
+      font-size: 15px !important;
+      color: dimgrey;
+    }
