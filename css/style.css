@@ -3936,7 +3936,7 @@ input[type="button"].btn-block {
   color: #fff; }
 
 .navbar-dark .navbar-toggler {
-  color: rgba(255, 255, 255, 0.5);
+  /* color: rgba(255, 255, 255, 0.5); */
   border-color: rgba(255, 255, 255, 0.1); }
 
 .navbar-dark .navbar-toggler-icon {
@@ -8377,7 +8377,6 @@ h1, h2, h3, h4, h5,
   color: #f15d30 !important; }
 
 .ftco-navbar-light {
-  background: transparent !important;
   position: absolute;
   top: -8px;
   left: 0;
@@ -8385,7 +8384,7 @@ h1, h2, h3, h4, h5,
   z-index: 3; }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
-      background: #000000 !important;
+      /* background: #000000 !important; */
       position: relative;
       top: 0;
       padding-top: 0;
@@ -8415,7 +8414,7 @@ h1, h2, h3, h4, h5,
       padding-bottom: 1.5rem;
       padding-left: 20px;
       padding-right: 20px;
-      color: #fff;
+      color: black;
       font-weight: 500;
       opacity: 1 !important; }
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover, .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:focus {
@@ -8425,7 +8424,9 @@ h1, h2, h3, h4, h5,
           padding-left: 0;
           padding-right: 0;
           padding-bottom: 0;
-          color: #fff; } }
+          /* color: #fff;  */
+        } 
+      }
     .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
       border: none;
       background: #fff;
@@ -8480,7 +8481,7 @@ h1, h2, h3, h4, h5,
         color: #f15d30; } }
   .ftco-navbar-light .navbar-toggler {
     border: none;
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: black !important;
     cursor: pointer;
     padding-right: 0;
     text-transform: uppercase;
@@ -8875,7 +8876,7 @@ h1, h2, h3, h4, h5,
       color: #f15d30; }
 
 .ftco-select-destination .container-2 {
-  margin: 0 0 0 auto !important;
+  margin: 0 auto !important;
   max-width: 1290px; }
 
 .project-destination .img {
@@ -10085,3 +10086,19 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    .location{
+			/* text-align: center; */
+			transform: translateY(20px);
+		}
+		.location span {
+			text-align: center;
+			background: #f15d30;
+			padding: 10px 25px;
+			border-radius: 4px;
+			color: white;
+			/* box-shadow: 0 0 2px dimgray; */
+			width: auto;
+			font-size: 15px !important;
+			cursor: pointer;
+		}
