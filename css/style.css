@@ -10105,13 +10105,50 @@ textarea.form-control {
 			font-size: 15px !important;
 			cursor: pointer;
 		}
-    .detailsbtn:hover{
-      background-color: green !important;
+    /* .paymentclass{
+      background-color: rgba(55, 155, 255, 0); padding: 60px 0px 50px 0px;transform: translateY(20px); width: auto; margin: 0 auto; box-shadow:inset 0 0 100px rgba(255, 255, 255, .4); max-width: 800px; overflow: hidden;
+    } */
+    .paymentclass{
+      overflow: hidden;
+      width: auto;
+      margin: 0 auto;
+      transform: translateY(10px);
+      padding: 10px 0 0px 0;
     }
+    /* .detailsbtn:hover{
+      background-color: green !important;
+    } */
     .description{
       transform: translate(5px, 10px);
       font-size: 15px !important;
       color: dimgrey;
+    }
+    .razorpay-payment-button a, .razorpay-payment-button svg path{
+      background-color: #f15d30 !important;
+      background-image: none !important;
+      /* padding: 20px !important; */
+      transform: scale(1.6, 1.5);
+      border-radius: 2px !important;
+      /* box-shadow: 0 0 50px rgba(255, 255, 255, .8); */
+      transition: .5s;
+      font-style: normal !important;
+      border: solid 1px #f15d30 !important;
+      min-width: 200px !important;
+      width: 100% !important;
+    }
+    .razorpay-payment-button:hover a,.razorpay-payment-button:hover .svelte-ekc7fv {
+      background: rgb(35, 113, 236) !important;
+      color: white !important;
+      fill: white;
+      border: none !important;
+    }
+    .svelte-ekc7fv {
+      fill: white;
+    }
+    @media (max-width: 400px){
+      .razorpay-payment-button a {
+        transform: scale(1);
+      }
     }
     .imagebox{
       width: 400px;
