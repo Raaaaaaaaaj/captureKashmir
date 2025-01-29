@@ -6697,6 +6697,7 @@ button.bg-dark:focus {
   box-shadow: none !important; }
 
 .w-25 {
+  transform: scale(1.21);
   width: 30% !important; }
 
 .w-50 {
@@ -9652,6 +9653,7 @@ textarea.form-control {
     z-index: 1;
     margin-top: -40px;
     background: #fff;
+    min-height: 250px;
     -webkit-box-shadow: 0px 10px 23px -8px rgba(0, 0, 0, 0.11);
     -moz-box-shadow: 0px 10px 23px -8px rgba(0, 0, 0, 0.11);
     box-shadow: 0px 10px 23px -8px rgba(0, 0, 0, 0.11);
@@ -10110,4 +10112,6 @@ textarea.form-control {
     }
     .imagebox{
       width: 400px;
+      overflow: hidden;
+      transform: translateY(5px);
     }
