@@ -10105,6 +10105,9 @@ textarea.form-control {
 			font-size: 15px !important;
 			cursor: pointer;
 		}
+    .detailsbtn:hover{
+      background-color: green !important;
+    }
     .description{
       transform: translate(5px, 10px);
       font-size: 15px !important;
