@@ -9091,13 +9091,13 @@ h1, h2, h3, h4, h5,
       .services.services-1 .media-body h3 {
         color: #fff; }
   .services.color-1:after {
-    background: #1089ff; }
+    background: #87b500b0; }
   .services.color-2:after {
-    background: #048998; }
+    background: rgba(4, 137, 152, 0.7); }
   .services.color-3:after {
-    background: #00a8b5; }
+    background: #1089ff94; }
   .services.color-4:after {
-    background: #ff5959; }
+    background: #d159ff8f; }
 
 .aside-stretch {
   background: #f48260; }
