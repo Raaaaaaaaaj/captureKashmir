@@ -9648,12 +9648,17 @@ textarea.form-control {
     .blog-entry {
       margin-bottom: 30px; } }
   .blog-entry .text {
+    /* overflow-wrap: break-word; */
+    /* overflow-y: scroll; */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,.05) transparent;
     width: 90%;
     margin: 0 auto;
     z-index: 1;
     margin-top: -40px;
     background: #fff;
     min-height: 250px;
+    /* max-height: 250px; */
     -webkit-box-shadow: 0px 10px 23px -8px rgba(0, 0, 0, 0.11);
     -moz-box-shadow: 0px 10px 23px -8px rgba(0, 0, 0, 0.11);
     box-shadow: 0px 10px 23px -8px rgba(0, 0, 0, 0.11);
