@@ -8,29 +8,37 @@
 		}
 
 		.social {
-			position: fixed;
-			top: 20px;
+			overflow: hidden;
+			transform: translateX(-200px);
+			bottom: auto;
+			position: absolute;
 		}
 
 		.social ul {
 			padding: 0px;
-			transform: translate(-270px,0);
 		}
 
 		.social ul li {
+			overflow: hidden;
 			display: block;
 			margin: 5px;
-			background: rgba(200, 158, 172, 0.5);
-			width: 300px;
+			background: rgba(25, 125, 255, 0.5);
+			width: 400px;
 			text-align: right;
-			padding: 10px;
-			border-radius: 0 30px 30px 0;
-			transition: all 1.5s;
+			padding: 20px 40px !important;
+			transform: translate(-110px,0);
+			/* border-radius: 0 30px 30px 0; */
+			/* transition: all 1.5s; */
 		}
 
 		.social ul li:hover {
-			transform: translate(110px,0);
-			background: #c44a73;
+			transform: translate(0px,0);
+			background: white;
+			transition: all 1.5s;
+		}
+		.social ul li:hover .social ul li p {
+			transform: translate(0px,0);
+			background: white;
 			transition: all 1.5s;
 		}
 
@@ -39,21 +47,21 @@
 		}
 
 		.social ul li:hover i{
-			color: #c44a73;
-			background: white;
+			color: black;
+			/* background: white; */
 			transform: rotate(360deg);
 			transition: all 1.5s;
 		}
 
 		.social ul li i, .icos {
 			margin-left: 10px;
-			color: #000;
-			background: white;
+			color: white;
+			/* background: white; */
 			padding: 10px;
 			border-radius: 50%;
-			width: 20px;
-			height: 20px;
-			transform: rotate(0deg);
+			/* width: 20px; */
+			/* height: 20px; */
+			transform: rotate(0deg) translateX(0px);
 			text-align: center;
 			font-size: 20px;
 		}
@@ -116,8 +124,16 @@
 					<p style="margin: 40px;"></p>
 					<nav class="social">
 						<ul>
-							<li>9906518172<a class="cicot" href="tel:9906518172"> <i class="fa-brands fa-whatsapp icos"></i></a></li>
-							<li>9103993953<a class="cicot" href="tel:9103993953"> <i class="fa-solid fa-phone icos"></i></a></li>
+							<li>
+								<a class="cicot" href="https://wa.me/9906518172"> <i class="fa-brands fa-whatsapp icos"></i></a>
+								<a class="cicot" href="tel:9906518172"> <i class="fa-solid fa-phone icos"></i></a>
+								<p style="display: inline;">9906518172</p>
+							</li>
+							<li>
+								<a class="cicot" href="https://wa.me/9103993953"> <i class="fa-brands fa-whatsapp icos"></i></a>
+								<a class="cicot" href="tel:9103993953"> <i class="fa-solid fa-phone icos"></i></a>
+								<p style="display: inline;">9906518172</p>
+							</li>
 						</ul>
 					</nav>
 				</div>
