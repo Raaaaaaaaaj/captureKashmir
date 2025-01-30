@@ -15,30 +15,33 @@
 		}
 
 		.social ul {
+			margin: 0;
 			padding: 0px;
 		}
 
 		.social ul li {
 			overflow: hidden;
 			display: block;
-			margin: 5px;
+			margin: 10px 0;
 			background: rgba(25, 125, 255, 0.5);
 			width: 400px;
 			text-align: right;
-			padding: 20px 40px !important;
-			transform: translate(-110px,0);
+			padding: 15px 40px !important;
+			transform: translate(-200px,0);
 			/* border-radius: 0 30px 30px 0; */
-			/* transition: all 1.5s; */
+			transition: all 1.5s;
+			cursor: pointer;
 		}
 
 		.social ul li:hover {
-			transform: translate(0px,0);
+			transform: translate(-100px,0);
 			background: white;
 			transition: all 1.5s;
 		}
-		.social ul li:hover .social ul li p {
+		.social ul li:hover .citcotp {
 			transform: translate(0px,0);
-			background: white;
+			/* background: white; */
+			color: black;
 			transition: all 1.5s;
 		}
 
@@ -47,7 +50,7 @@
 		}
 
 		.social ul li:hover i{
-			color: black;
+			color: #f15d30;
 			/* background: white; */
 			transform: rotate(360deg);
 			transition: all 1.5s;
@@ -63,7 +66,17 @@
 			/* height: 20px; */
 			transform: rotate(0deg) translateX(0px);
 			text-align: center;
-			font-size: 20px;
+			/* font-size: 20px; */
+		}
+		.packageclass{
+			max-height: 300px;
+			scrollbar-width: thin;
+			scrollbar-color: transparent transparent;
+			overflow-y: scroll;
+			transition: .5s;
+		}
+		.packageclass:hover {
+			scrollbar-color: rgba(255, 100, 0, .1) transparent;
 		}
 	</style>
 	<title>Capture Kashmir</title>
@@ -125,14 +138,14 @@
 					<nav class="social">
 						<ul>
 							<li>
-								<a class="cicot" href="https://wa.me/9906518172"> <i class="fa-brands fa-whatsapp icos"></i></a>
-								<a class="cicot" href="tel:9906518172"> <i class="fa-solid fa-phone icos"></i></a>
-								<p style="display: inline;">9906518172</p>
+								<a class="cicot" href="https://wa.me/9906518172"> <i class="fa-brands fa-whatsapp fa-2xl icos"></i></a>
+								<a class="cicot" href="tel:9906518172"> <i class="fa-solid fa-phone fa-xl icos"></i></a>
+								<p style="display: inline;" class="citcotp">9906518172</p>
 							</li>
 							<li>
-								<a class="cicot" href="https://wa.me/9103993953"> <i class="fa-brands fa-whatsapp icos"></i></a>
-								<a class="cicot" href="tel:9103993953"> <i class="fa-solid fa-phone icos"></i></a>
-								<p style="display: inline;">9906518172</p>
+								<a class="cicot" href="https://wa.me/9103993953"> <i class="fa-brands fa-whatsapp fa-2xl icos"></i></a>
+								<a class="cicot" href="tel:9103993953"> <i class="fa-solid fa-phone fa-xl icos"></i></a>
+								<p style="display: inline;" class="citcotp">9103993953</p>
 							</li>
 						</ul>
 					</nav>
@@ -508,6 +521,7 @@
 							<div class="text p-4">
 				
 								<h3><a href="#">Srinagar Splendour</a></h3>
+								<p class="timespan"><a href="#">Six Days, Five Nights</a></p>
 								<p class="description">Experience the breathtaking paradise of Srinagar with six days, five nights tour of blissful serenity!</p>
 								<p class="location"><span onclick="window.location.href='srinagar.html'">Details</span></p>
 							</div>
@@ -520,6 +534,7 @@
 							</a>
 							<div class="text p-4">
 								<h3><a href="#">Valleys of Kashmir</a></h3>
+								<p class="timespan"><a href="#">Five Days, Four Nights</a></p>
 								<p class="description">Discover the Enchanted Valleys of Kashmir - five days, four nights of breathtaking beauty!</p>
 								<p class="location"><span onclick="window.location.href='kashmirvalley.html'">Details</span></p>
 							</div>
@@ -919,25 +934,30 @@
 						<div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
 							<h2 class="ftco-heading-2">Infromation</h2>
 							<ul class="list-unstyled">
-								<li><a href="#" class="py-2 d-block">Online Enquiry</a></li>
-								<li><a href="#" class="py-2 d-block">General Enquiries</a></li>
-								<li><a href="#" class="py-2 d-block">Booking Conditions</a></li>
-								<li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
-								<li><a href="#" class="py-2 d-block">Refund Policy</a></li>
-								<li><a href="#" class="py-2 d-block">Call Us</a></li>
+								<li><a href="#" class="py-2 d-block">Home</a></li>
+								<li><a href="#" class="py-2 d-block">About</a></li>
+								<li><a href="#" class="py-2 d-block">Destination</a></li>
+								<li><a href="#" class="py-2 d-block">Contact</a></li>
+								<!-- <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
+								<li><a href="#" class="py-2 d-block">Call Us</a></li> -->
 							</ul>
 						</div>
 					</div>
 					<div class="col-md pt-5 border-left">
 						<div class="ftco-footer-widget pt-md-5 mb-4">
-							<h2 class="ftco-heading-2">Experience</h2>
-							<ul class="list-unstyled">
-								<li><a href="#" class="py-2 d-block">Adventure</a></li>
-								<li><a href="#" class="py-2 d-block">Hotel and Restaurant</a></li>
-								<li><a href="#" class="py-2 d-block">Beach</a></li>
-								<li><a href="#" class="py-2 d-block">Nature</a></li>
-								<li><a href="#" class="py-2 d-block">Camping</a></li>
-								<li><a href="#" class="py-2 d-block">Party</a></li>
+							<h2 class="ftco-heading-2">Packages</h2>
+							<ul class="list-unstyled packageclass">
+								<li><a href="#" class="py-2 d-block">Srinagar Splendour</a></li>
+								<li><a href="#" class="py-2 d-block">Valleys Of Kashmir</a></li>
+								<li><a href="#" class="py-2 d-block">Essence Of Kashmir</a></li>
+								<li><a href="#" class="py-2 d-block">Vaishno Devi Trek</a></li>
+								<li><a href="#" class="py-2 d-block">Wild Gurez Escape</a></li>
+								<li><a href="#" class="py-2 d-block">Honeymoon Escape</a></li>
+								<li><a href="#" class="py-2 d-block">Ladakh Expedition</a></li>
+								<li><a href="#" class="py-2 d-block">Himalayan Odyssey</a></li>
+								<li><a href="#" class="py-2 d-block">Buddhist Monasteries</a></li>
+								<li><a href="#" class="py-2 d-block">Sports & Activities</a></li>
+								<li><a href="#" class="py-2 d-block">Journey To The Leh</a></li>
 							</ul>
 						</div>
 					</div>

@@ -10124,9 +10124,12 @@ textarea.form-control {
       background-color: green !important;
     } */
     .description{
-      transform: translate(5px, 10px);
+      transform: translate(5px, -5px);
       font-size: 15px !important;
       color: dimgrey;
+    }
+    .timespan{
+      transform: translate(5px 10px);
     }
     .razorpay-payment-button a, .razorpay-payment-button svg path{
       background-color: #f15d30 !important;
