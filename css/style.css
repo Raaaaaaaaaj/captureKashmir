@@ -6697,7 +6697,7 @@ button.bg-dark:focus {
   box-shadow: none !important; }
 
 .w-25 {
-  transform: scale(1.21);
+  transform: scale(1);
   width: 30% !important; }
 
 .w-50 {
