@@ -10265,3 +10265,16 @@ textarea.form-control {
 			display: block;
 			transform: translate(0px, -30px);
 		}
+    @media(max-width: 570px){
+			.imagebox{
+				width: 120px !important;
+				transition: 0;
+			}
+			.imagebox img{
+				width: 140px !important;
+				transition: 0;
+			}
+			.w-25{
+				width: 100% !important;
+			}
+		}_
