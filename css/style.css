@@ -3606,9 +3606,14 @@ input[type="button"].btn-block {
 
 .tab-content > .active {
   display: block; }
-  .testimony-wrap .text .mb-4{
-    min-height: 200px;
-    /* max-height: 350px; */
+.testimony-wrap .text .mb-4{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-height: 120px;
+    max-height: 120px !important;
   }
 .navbar {
   position: relative;
@@ -10255,4 +10260,8 @@ textarea.form-control {
 		}
 		.packageclass:hover {
 			scrollbar-color: rgba(255, 100, 0, .1) transparent;
+		}
+    .readmore{
+			display: block;
+			transform: translate(0px, -30px);
 		}
