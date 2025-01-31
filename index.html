@@ -1,86 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="icon" href="images/logo.jpg.jpg">
+	<!-- <script>
+		let faviconIndex = 0;
+		const favicons = [
+		  "images/logo.jpg.jpg",
+		  "images/logo.jpg",
+		]; // Add multiple frames of your GIF
+	  
+		function changeFavicon() {
+		  const link = document.querySelector("link[rel='icon']") || document.createElement("link");
+		  link.rel = "icon";
+		  link.href = favicons[faviconIndex];
+		  document.head.appendChild(link);
+		  faviconIndex = (faviconIndex + 1) % favicons.length;
+		}
+	  
+		setInterval(changeFavicon, 4000); // Change frame every 200ms
+	  </script> -->
+	  
 	<style>
-		.cicot {
-			margin: 0 -10px 0 0;
-			color: white;
-			text-decoration: none;
+		.nav-item{
+			z-index: 1;
 		}
-
-		.social {
-			overflow: hidden;
-			transform: translate(-170px, -180px);
-			bottom: auto;
-			position: absolute;
+		/* .ftco-navbar-light.scrolled .nav-rbtn {
+			padding-top: 0rem !important; 
+			padding-bottom: 0rem !important;
+			color: #000000 !important;
 		}
-
-		.social ul {
-			margin: 0;
-			padding: 0px;
-		}
-
-		.social ul li {
-			overflow: hidden;
-			display: block;
-			margin: 10px 0;
-			background: rgba(25, 125, 255, 0.5);
-			width: 450px;
-			text-align: right;
-			padding: 10px 20px !important;
-			transform: translate(-220px,0);
-			border-radius: 0 4px 4px 0;
-			transition: all 1.5s;
-			cursor: pointer;
-		}
-
-		.social ul li:hover {
-			transform: translate(-50px,0);
-			background: white;
-			transition: all 1.5s;
-		}
-		.social ul li:hover .citcotp {
-			transform: translate(0px,0);
-			/* background: white; */
+		.ftco-navbar-light .navbar-nav > .nav-item > .nav-rbtn {
+			font-size: 15px;
+			padding-top: 0rem;
+			padding-bottom: 0rem;
+			padding-left: 20px;
+			padding-right: 20px;
 			color: black;
-			transition: all 1.5s;
+			font-weight: 500;
+			opacity: 1 !important;
+		} */
+		 .rightbtn {transform: translateX(-6vw); z-index: 0;}
+		.rightbtn a{
+			transform: translateX(10vw);
+			/* margin-left: 100px; */
+			display: flex;
+			flex-direction: row;
 		}
-
-		.social ul li:hover a {
-			color: white;
+		.timespan a{
+			font-weight: bold;
 		}
-
-		.social ul li:hover i{
-			color: #f15d30;
-			/* background: white; */
-			transform: rotate(360deg);
-			transition: all 1.5s;
+		.bg-orange{
+			background-color: white !important;
+			/* color: #f15d30 !important; */
+			transform: translate(10px, -3px) !important;
+			/* border: solid 1px #f15d30 !important; */
+			box-shadow: 0 0 0px grey;
+			transition: 1s;
 		}
-		.social ul li:hover .icos{
-			color: white;
+		.bg-orange:hover{
+			/* background-color:  !important; */
+			color: #f15d30 !important;
+			box-shadow: 0 0 5px grey;
+		}
+		.p-2-5{
+			padding: 10px 10px !important;
+			border-radius: 4px !important;
+		}
+		.rightbtnp{
+			margin: -7px 0px 0px 30px ;
+			border-radius: 4px;
 			background: #f15d30;
-		}
-
-		.social ul li i, .icos {
-			margin-left: 10px;
+			padding: 7px 20px;
 			color: white;
-			padding: 20px 0px;
-			border-radius: 50%;
-			width: 40px;
-			height: 40px;
-			transform: rotate(0deg) translateX(0px);
+			min-width: 120px;
 			text-align: center;
-			/* font-size: 20px; */
+			
 		}
-		.packageclass{
-			max-height: 300px;
-			scrollbar-width: thin;
-			scrollbar-color: transparent transparent;
-			overflow-y: scroll;
-			transition: .5s;
-		}
-		.packageclass:hover {
-			scrollbar-color: rgba(255, 100, 0, .1) transparent;
+		@media (max-width: 1027px){
+			.rightbtn{
+				transform: translate(0, -10px);
+
+			}
+			.rightbtn a{
+				flex-direction: column !important;
+				max-width: 200px;
+				transform: translate(0);
+			}
+			.rightbtnp{
+				margin: 0;
+				padding: .5rem 0;
+				background: transparent;
+				color: black;
+				text-align: left;
+				transition: .4s;
+			}
+			.rightbtnp:hover{
+				color: green;
+			}
+			#ftco-nav{
+				transform: translateX(10px);
+			}
 		}
 	</style>
 	<title>Capture Kashmir</title>
@@ -107,8 +126,8 @@
 			<a class="navbar-brand imagebox" href="index.html">
 				<img src="images/logo.jpg.jpg" class="img-fluid w-25" alt=""></span>
 			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
+			<button class="navbar-toggler bg-orange p-2-5" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu&nbsp&nbsp<i class="fa-solid fa-bars fa-xl famenu"></i>
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
@@ -123,6 +142,7 @@
 					<!-- <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li> -->
 					<!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+					<li class="nav-item rightbtn"><a href="#" class="nav-link nav-rbtn"><p class="rightbtnp">Pay&nbspUs</p><p class="rightbtnp">Donate&nbspUs</p></a></li>
 				</ul>
 			</div>
 		</div>
@@ -730,12 +750,12 @@
 											<span class="fa fa-star"></span>
 											<span class="fa fa-star"></span>
 										</p>
-										<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<p class="mb-4">My experience with Capture Kashmir Tour and Travels is excellent and especially co-ordinator mehak lala is very cooperative overall my tour was very value to budget.</p>
 										<div class="d-flex align-items-center">
 											<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
 											<div class="pl-3">
-												<p class="name">Roger Scott</p>
-												<span class="position">Marketing Manager</span>
+												<p class="name">Maqsood Alam</p>
+												<span class="position">Tourist</span>
 											</div>
 										</div>
 									</div>
@@ -751,12 +771,12 @@
 											<span class="fa fa-star"></span>
 											<span class="fa fa-star"></span>
 										</p>
-										<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<p class="mb-4">My Kashmir trip was through Capture Travels and I really appreciate their services. We enjoyed our trip and they were very flexible with the end moment changes we wanted. It was a beautiful and budget friendly trip.</p>
 										<div class="d-flex align-items-center">
 											<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
 											<div class="pl-3">
-												<p class="name">Roger Scott</p>
-												<span class="position">Marketing Manager</span>
+												<p class="name">Manisha Bhatia</p>
+												<span class="position">Tourist</span>
 											</div>
 										</div>
 									</div>
@@ -772,12 +792,12 @@
 											<span class="fa fa-star"></span>
 											<span class="fa fa-star"></span>
 										</p>
-										<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<p class="mb-4">The tour was organised very well the stay, food and travel was very satisfactory, the driver was very cooperative. Thanks to capture kashmir tours.</p>
 										<div class="d-flex align-items-center">
 											<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
 											<div class="pl-3">
-												<p class="name">Roger Scott</p>
-												<span class="position">Marketing Manager</span>
+												<p class="name">Jitendra Prasand</p>
+												<span class="position">Tourist</span>
 											</div>
 										</div>
 									</div>
@@ -793,12 +813,12 @@
 											<span class="fa fa-star"></span>
 											<span class="fa fa-star"></span>
 										</p>
-										<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<p class="mb-4">Capture Kashmir provided us a very nice hospitality in Kashmir. Driver Aadil is an excellent person. We had a very nice experience with him during our whole trip</p>
 										<div class="d-flex align-items-center">
 											<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
 											<div class="pl-3">
-												<p class="name">Roger Scott</p>
-												<span class="position">Marketing Manager</span>
+												<p class="name">Avinash Kumar</p>
+												<span class="position">Tourist</span>
 											</div>
 										</div>
 									</div>
@@ -814,12 +834,12 @@
 											<span class="fa fa-star"></span>
 											<span class="fa fa-star"></span>
 										</p>
-										<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<p class="mb-4">We enjoyed a lot in Kashmir. They have provided us very good hotels. Food was great. Driver provided to us was also good. He has cooperated with us very nicely. We had a great trip. They have resolved all our issues instantly</p>
 										<div class="d-flex align-items-center">
 											<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
 											<div class="pl-3">
-												<p class="name">Roger Scott</p>
-												<span class="position">Marketing Manager</span>
+												<p class="name">sayantan pal</p>
+												<span class="position">Tourist</span>
 											</div>
 										</div>
 									</div>
