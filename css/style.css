@@ -10183,7 +10183,7 @@ textarea.form-control {
 
 		.social {
 			overflow: hidden;
-			transform: translate(-170px, -180px);
+			transform: translate(-180px, -235px) scale(.75);
 			bottom: auto;
 			position: absolute;
 		}
@@ -10196,15 +10196,16 @@ textarea.form-control {
 		.social ul li {
 			overflow: hidden;
 			display: block;
-			margin: 10px 0;
+			margin: 5px 0;
 			background: rgba(25, 125, 255, 0.5);
 			width: 450px;
 			text-align: right;
 			padding: 10px 20px !important;
-			transform: translate(-220px,0);
-			border-radius: 0 4px 4px 0;
+			transform: translate(-230px, 0);
+			border-radius: 0 100px 100px 0;
 			transition: all 1.5s;
 			cursor: pointer;
+      /* font-size: 15px; */
 		}
 
 		.social ul li:hover {
