@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<link rel="icon" href="images/logo.jpg.jpg">
 	<!-- <script>
@@ -19,23 +20,29 @@
 	  
 		setInterval(changeFavicon, 4000); // Change frame every 200ms
 	  </script> -->
-	  
+
 	<style>
-		.nav-item{
+		.nav-item {
 			z-index: 1;
 		}
-		
-		 .rightbtn {transform: translateX(-6vw); z-index: 0;}
-		.rightbtn a{
+
+		.rightbtn {
+			transform: translateX(-6vw);
+			z-index: 0;
+		}
+
+		.rightbtn a {
 			transform: translateX(10vw);
 			/* margin-left: 100px; */
 			display: flex;
 			flex-direction: row;
 		}
-		.timespan a{
+
+		.timespan a {
 			font-weight: bold;
 		}
-		.bg-orange{
+
+		.bg-orange {
 			background-color: white !important;
 			/* color: #f15d30 !important; */
 			transform: translate(10px, -3px) !important;
@@ -43,37 +50,42 @@
 			box-shadow: 0 0 0px grey;
 			transition: 1s;
 		}
-		.bg-orange:hover{
+
+		.bg-orange:hover {
 			/* background-color:  !important; */
 			color: #f15d30 !important;
 			box-shadow: 0 0 5px grey;
 		}
-		.p-2-5{
+
+		.p-2-5 {
 			padding: 10px 10px !important;
 			border-radius: 4px !important;
 		}
-		.rightbtnp{
-			margin: -7px 0px 0px 30px ;
+
+		.rightbtnp {
+			margin: -7px 0px 0px 30px;
 			border-radius: 4px;
 			background: #f15d30;
 			padding: 7px 20px;
 			color: white;
 			min-width: 120px;
 			text-align: center;
-			
+
 		}
-		
-		@media (max-width: 1027px){
-			.rightbtn{
+
+		@media (max-width: 1027px) {
+			.rightbtn {
 				transform: translate(0, -10px);
 
 			}
-			.rightbtn a{
+
+			.rightbtn a {
 				flex-direction: column !important;
 				max-width: 200px;
 				transform: translate(0);
 			}
-			.rightbtnp{
+
+			.rightbtnp {
 				margin: 0;
 				padding: .5rem 0;
 				background: transparent;
@@ -81,10 +93,12 @@
 				text-align: left;
 				transition: .4s;
 			}
-			.rightbtnp:hover{
+
+			.rightbtnp:hover {
 				color: green;
 			}
-			#ftco-nav{
+
+			#ftco-nav {
 				transform: translateX(10px);
 			}
 		}
@@ -94,7 +108,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+		integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -106,6 +122,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script defer async src='https://cdn.trustindex.io/loader-cert.js?f0324bf40d4249048706245e516'></script>
 </head>
+
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-white ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
@@ -113,7 +130,8 @@
 			<a class="navbar-brand imagebox" href="index.html">
 				<img src="images/logo.jpg.jpg" class="img-fluid w-25" alt=""></span>
 			</a>
-			<button class="navbar-toggler bg-orange p-2-5" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler bg-orange p-2-5" type="button" data-toggle="collapse" data-target="#ftco-nav"
+				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu&nbsp&nbsp<i class="fa-solid fa-bars fa-xl famenu"></i>
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
@@ -129,7 +147,10 @@
 					<!-- <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li> -->
 					<!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-					<li class="nav-item rightbtn"><a href="#" class="nav-link nav-rbtn"><p class="rightbtnp">Pay&nbspUs</p><p class="rightbtnp">Donate&nbspUs</p></a></li>
+					<li class="nav-item rightbtn"><a href="#" class="nav-link nav-rbtn">
+							<p class="rightbtnp">Pay&nbspUs</p>
+							<p class="rightbtnp">Donate&nbspUs</p>
+						</a></li>
 				</ul>
 			</div>
 		</div>
@@ -144,7 +165,9 @@
 					<span class="subheading">Welcome to Capture Kashmir</span>
 					<h1 class="mb-4">Discover Your Favorite Place with Us</h1>
 					<p style="margin: 40px;"></p>
-					<p class="caps">Travel to any corner of the world without going around in circles. Discover stunning destinations, unique experiences, and seamless journeys tailored just for you. Let us make your travel dreams a reality with expert guidance and hassle-free bookings!</p>
+					<p class="caps">Travel to any corner of the world without going around in circles. Discover stunning
+						destinations, unique experiences, and seamless journeys tailored just for you. Let us make your
+						travel dreams a reality with expert guidance and hassle-free bookings!</p>
 					<p style="margin: 40px;"></p>
 				</div>
 			</div>
@@ -162,11 +185,12 @@
 			</li>
 			<li>
 				<p style="display: inline;" class="citcotp">Follow Us On</p>
-				<a class="cicot" href="https://www.facebook.com/share/15AyCo7jmr/"> <i class="fa-brands fa-facebook-f fa-2xl .icos"></i></a>
+				<a class="cicot" href="https://www.facebook.com/share/15AyCo7jmr/"> <i
+						class="fa-brands fa-facebook-f fa-2xl .icos"></i></a>
 			</li>
 			<li>
 				<p style="display: inline;" class="citcotp">Follow Us On</p>
-				<a class="cicot" href="instagram.com"> <i class="fa-brands fa-instagram fa-2xl  icos"></i></a>
+				<a class="cicot" href="https://www.instagram.com/capture_kashmir_tours?igsh=MTNjYW53c3FmeTJ3OQ=="> <i class="fa-brands fa-instagram fa-2xl  icos"></i></a>
 			</li>
 		</ul>
 	</nav>
@@ -335,182 +359,197 @@
 
 	<!-- About US -->
 	<section class="ftco-section services-section" data-widget-id="f0324bf40d4249048706245e516">
-			<div class="container">
-				<div class="row d-flex">
-					<div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
-						<div class="w-100">
-							<span class="subheading">Welcome to Capture Kashmir</span>
-							<h2 class="mb-4">It's time to start your adventure</h2>
-							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-							A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-							<p><a href="#" class="btn btn-primary py-3 px-4">Explore Destination</a></p>
-						</div>
+		<div class="container">
+			<div class="row d-flex">
+				<div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
+					<div class="w-100">
+						<span class="subheading">Welcome to Capture Kashmir</span>
+						<h2 class="mb-4">It's time to start your adventure</h2>
+						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+							It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+							there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
+							Semantics, a large language ocean.
+							A small river named Duden flows by their place and supplies it with the necessary
+							regelialia.</p>
+						<p><a href="#" class="btn btn-primary py-3 px-4">Explore Destination</a></p>
 					</div>
-					<div class="col-md-6">
-						<div class="row">
-							<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-								<div class="services services-1 color-1 d-block img" style="background-image: url(images/services-1.jpg);">
-									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-paragliding"></span></div>
-									<div class="media-body">
-										<h3 class="heading mb-3">Activities</h3>
-										<p>A small river named Duden flows by their place and supplies it with the necessary</p>
-									</div>
-								</div>      
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+							<div class="services services-1 color-1 d-block img"
+								style="background-image: url(images/services-1.jpg);">
+								<div class="icon d-flex align-items-center justify-content-center"><span
+										class="flaticon-paragliding"></span></div>
+								<div class="media-body">
+									<h3 class="heading mb-3">Activities</h3>
+									<p>A small river named Duden flows by their place and supplies it with the necessary
+									</p>
+								</div>
 							</div>
-							<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-								<div class="services services-1 color-2 d-block img" style="background-image: url(images/services-2.jpg);">
-									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
-									<div class="media-body">
-										<h3 class="heading mb-3">Travel Arrangements</h3>
-										<p>A small river named Duden flows by their place and supplies it with the necessary</p>
-									</div>
-								</div>    
+						</div>
+						<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+							<div class="services services-1 color-2 d-block img"
+								style="background-image: url(images/services-2.jpg);">
+								<div class="icon d-flex align-items-center justify-content-center"><span
+										class="flaticon-route"></span></div>
+								<div class="media-body">
+									<h3 class="heading mb-3">Travel Arrangements</h3>
+									<p>A small river named Duden flows by their place and supplies it with the necessary
+									</p>
+								</div>
 							</div>
-							<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-								<div class="services services-1 color-3 d-block img" style="background-image: url(images/services-3.jpg);">
-									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-tour-guide"></span></div>
-									<div class="media-body">
-										<h3 class="heading mb-3">Private Guide</h3>
-										<p>A small river named Duden flows by their place and supplies it with the necessary</p>
-									</div>
-								</div>      
+						</div>
+						<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+							<div class="services services-1 color-3 d-block img"
+								style="background-image: url(images/services-3.jpg);">
+								<div class="icon d-flex align-items-center justify-content-center"><span
+										class="flaticon-tour-guide"></span></div>
+								<div class="media-body">
+									<h3 class="heading mb-3">Private Guide</h3>
+									<p>A small river named Duden flows by their place and supplies it with the necessary
+									</p>
+								</div>
 							</div>
-							<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-								<div class="services services-1 color-4 d-block img" style="background-image: url(images/services-4.jpg);">
-									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-map"></span></div>
-									<div class="media-body">
-										<h3 class="heading mb-3">Location Manager</h3>
-										<p>A small river named Duden flows by their place and supplies it with the necessary</p>
-									</div>
-								</div>      
+						</div>
+						<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+							<div class="services services-1 color-4 d-block img"
+								style="background-image: url(images/services-4.jpg);">
+								<div class="icon d-flex align-items-center justify-content-center"><span
+										class="flaticon-map"></span></div>
+								<div class="media-body">
+									<h3 class="heading mb-3">Location Manager</h3>
+									<p>A small river named Duden flows by their place and supplies it with the necessary
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 	</section>
 	<!-- End About US -->
 
 	<!-- Variety Range of Destinations -->
 	<section class="ftco-section img ftco-select-destination" style="background-image: url(images/bg_3.jpg);">
-			<div class="container">
-				<div class="row justify-content-center pb-4">
-					<div class="col-md-12 heading-section text-center ftco-animate">
-						<span class="subheading">CK Provide Places</span>
-						<h2 class="mb-4">Variety Range of Destinations</h2>
-					</div>
+		<div class="container">
+			<div class="row justify-content-center pb-4">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<span class="subheading">CK Provide Places</span>
+					<h2 class="mb-4">Variety Range of Destinations</h2>
 				</div>
 			</div>
-			<div class="container container-2">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="carousel-destination owl-carousel ftco-animate">
-							<div class="item">
-								<div class="project-destination">
-									<div class="img" style="background-image: url(images/srinagar.webp);">
-										<div class="text">
-											<h3>Srinagar</h3>
-										</div>
+		</div>
+		<div class="container container-2">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="carousel-destination owl-carousel ftco-animate">
+						<div class="item">
+							<div class="project-destination">
+								<div class="img" style="background-image: url(images/srinagar.webp);">
+									<div class="text">
+										<h3>Srinagar</h3>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<div class="img" style="background-image: url(images/dallake.webp);">
-										<div class="text">
-											<h3>Dal Lake</h3>
-										</div>
+						</div>
+						<div class="item">
+							<div class="project-destination">
+								<div class="img" style="background-image: url(images/dallake.webp);">
+									<div class="text">
+										<h3>Dal Lake</h3>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<div class="img" style="background-image: url(images/pehelgam.webp);">
-										<div class="text">
-											<h3>Pahalgam</h3>
-										</div>
+						</div>
+						<div class="item">
+							<div class="project-destination">
+								<div class="img" style="background-image: url(images/pehelgam.webp);">
+									<div class="text">
+										<h3>Pahalgam</h3>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<div class="img" style="background-image: url(images/sonmarg.webp);">
-										<div class="text">
-											<h3>Sonamarg</h3>
-										</div>
+						</div>
+						<div class="item">
+							<div class="project-destination">
+								<div class="img" style="background-image: url(images/sonmarg.webp);">
+									<div class="text">
+										<h3>Sonamarg</h3>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<div class="img" style="background-image: url(images/sinthantop3.webp);">
-										<div class="text">
-											<h3>Sinthantop</h3>
-										</div>
+						</div>
+						<div class="item">
+							<div class="project-destination">
+								<div class="img" style="background-image: url(images/sinthantop3.webp);">
+									<div class="text">
+										<h3>Sinthantop</h3>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<div class="img" style="background-image: url(images/gurezvalley3.webp);">
-										<div class="text">
-											<h3>Gurez Valley</h3>
-										</div>
+						</div>
+						<div class="item">
+							<div class="project-destination">
+								<div class="img" style="background-image: url(images/gurezvalley3.webp);">
+									<div class="text">
+										<h3>Gurez Valley</h3>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<div class="img" style="background-image: url(images/gulmarg.webp);">
-										<div class="text">
-											<h3>Gulmarg</h3>
-										</div>
+						</div>
+						<div class="item">
+							<div class="project-destination">
+								<div class="img" style="background-image: url(images/gulmarg.webp);">
+									<div class="text">
+										<h3>Gulmarg</h3>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<div class="img" style="background-image: url(images/bungasvalley3.webp);">
-										<div class="text">
-											<h3>Bungas Valley</h3>
-										</div>
+						</div>
+						<div class="item">
+							<div class="project-destination">
+								<div class="img" style="background-image: url(images/bungasvalley3.webp);">
+									<div class="text">
+										<h3>Bungas Valley</h3>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<div class="img" style="background-image: url(images/dudhpathri3.webp);">
-										<div class="text">
-											<h3>Doodhpathri</h3>
-										</div>
+						</div>
+						<div class="item">
+							<div class="project-destination">
+								<div class="img" style="background-image: url(images/dudhpathri3.webp);">
+									<div class="text">
+										<h3>Doodhpathri</h3>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<div class="img" style="background-image: url(images/vaishnodevi.webp);">
-										<div class="text">
-											<h3>Vaishno Devi</h3>
-										</div>
+						</div>
+						<div class="item">
+							<div class="project-destination">
+								<div class="img" style="background-image: url(images/vaishnodevi.webp);">
+									<div class="text">
+										<h3>Vaishno Devi</h3>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<div class="img" style="background-image: url(images/ladakh.webp);">
-										<div class="text">
-											<h3>Leh Ladakh</h3>
-										</div>
+						</div>
+						<div class="item">
+							<div class="project-destination">
+								<div class="img" style="background-image: url(images/ladakh.webp);">
+									<div class="text">
+										<h3>Leh Ladakh</h3>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<div class="img" style="background-image: url(images/diskit.webp);">
-										<div class="text">
-											<h3>Diskit Monastery</h3>
-										</div>
+						</div>
+						<div class="item">
+							<div class="project-destination">
+								<div class="img" style="background-image: url(images/diskit.webp);">
+									<div class="text">
+										<h3>Diskit Monastery</h3>
 									</div>
 								</div>
 							</div>
@@ -518,174 +557,190 @@
 					</div>
 				</div>
 			</div>
+		</div>
 	</section>
 	<!-- End Variety Range of Destinations -->
-	 
+
 	<section class="ftco-section">
-			<div class="container">
-				<div class="row justify-content-center pb-4">
-					<div class="col-md-12 heading-section text-center ftco-animate">
-						<span class="subheading">CK Package</span>
-						<h2 class="mb-4">Tour Package</h2>
+		<div class="container">
+			<div class="row justify-content-center pb-4">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<span class="subheading">CK Package</span>
+					<h2 class="mb-4">Tour Package</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 ftco-animate">
+					<div class="project-wrap">
+						<a href="#" class="img" style="background-image: url(images/srinagar2.webp);">
+							<span class="price">The Valley of Peace</span>
+						</a>
+						<div class="text p-4">
+
+							<h3><a href="#">Srinagar Splendour</a></h3>
+							<p class="timespan"><a href="#">6 Days, 5 Nights</a></p>
+							<p class="description">Experience the breathtaking paradise of Srinagar with six days, five
+								nights tour of blissful serenity!</p>
+							<p class="location"><span onclick="window.location.href='srinagar.html'">Details</span></p>
+						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-4 ftco-animate">
-						<div class="project-wrap">
-							<a href="#" class="img" style="background-image: url(images/srinagar2.webp);">
-								<span class="price">The Valley of Peace</span>
-							</a>
-							<div class="text p-4">
-				
-								<h3><a href="#">Srinagar Splendour</a></h3>
-								<p class="timespan"><a href="#">6 Days, 5 Nights</a></p>
-								<p class="description">Experience the breathtaking paradise of Srinagar with six days, five nights tour of blissful serenity!</p>
-								<p class="location"><span onclick="window.location.href='srinagar.html'">Details</span></p>
-							</div>
+				<div class="col-md-4 ftco-animate">
+					<div class="project-wrap">
+						<a href="#" class="img" style="background-image: url(images/sinthantop2.webp);">
+							<span class="price">A Five-Day Retreat</span>
+						</a>
+						<div class="text p-4">
+							<h3><a href="#">Valleys of Kashmir</a></h3>
+							<p class="timespan"><a href="#">5 Days, 4 Nights</a></p>
+							<p class="description">Discover the Enchanted Valleys of Kashmir - five days, four nights of
+								breathtaking beauty!</p>
+							<p class="location"><span onclick="window.location.href='kashmirvalley.html'">Details</span>
+							</p>
 						</div>
 					</div>
-					<div class="col-md-4 ftco-animate">
-						<div class="project-wrap">
-							<a href="#" class="img" style="background-image: url(images/sinthantop2.webp);">
-								<span class="price">A Five-Day Retreat</span>
-							</a>
-							<div class="text p-4">
-								<h3><a href="#">Valleys of Kashmir</a></h3>
-								<p class="timespan"><a href="#">5 Days, 4 Nights</a></p>
-								<p class="description">Discover the Enchanted Valleys of Kashmir - five days, four nights of breathtaking beauty!</p>
-								<p class="location"><span onclick="window.location.href='kashmirvalley.html'">Details</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 ftco-animate">
-						<div class="project-wrap">
-							<a href="#" class="img" style="background-image: url(images/bungasvalley.webp);">
-								<span class="price">Beyond Boundaries</span>
-							</a>
-							<div class="text p-4">
-			
-								<h3><a href="#">Essence of Kashmir</a></h3>
-								<p class="timespan"><a href="#">10 Days, 9 Nights</a></p>
-								<p class="description">Explore the essence of Kashmir - ten days, nine nights of ethereal beauty & exhilarating adventures!</p>
-								<p class="location"><span onclick="window.location.href='kashmiressence.html'">Details</span></p>
-							</div>
-						</div>
-					</div>
+				</div>
+				<div class="col-md-4 ftco-animate">
+					<div class="project-wrap">
+						<a href="#" class="img" style="background-image: url(images/bungasvalley.webp);">
+							<span class="price">Beyond Boundaries</span>
+						</a>
+						<div class="text p-4">
 
-					<div class="col-md-4 ftco-animate">
-						<div class="project-wrap">
-							<a href="#" class="img" style="background-image: url(images/gulmarg2.webp);">
-								<span class="price">A Spiritual Odyssey</span>
-							</a>
-							<div class="text p-4">
-		
-								<h3><a href="#">Vaishno Devi Trek</a></h3>
-								<p class="timespan"><a href="#">4 Days, 3 Nights</a></p>
-								<p class="description">Embark on a divine trek to Vaishno Devi, a 4-day, 3-night spiritual odyssey of faith & transcendence!</p>
-								<p class="location"><span onclick="window.location.href='vaishnodevi.html'">Details</span></p>
-							</div>
+							<h3><a href="#">Essence of Kashmir</a></h3>
+							<p class="timespan"><a href="#">10 Days, 9 Nights</a></p>
+							<p class="description">Explore the essence of Kashmir - ten days, nine nights of ethereal
+								beauty & exhilarating adventures!</p>
+							<p class="location"><span
+									onclick="window.location.href='kashmiressence.html'">Details</span></p>
 						</div>
 					</div>
-					<div class="col-md-4 ftco-animate">
-						<div class="project-wrap">
-							<a href="#" class="img" style="background-image: url(images/gurezvalley2.webp);">
-								<span class="price">Kashmir Odyssey</span>
-							</a>
-							<div class="text p-4">
-								
-								<h3><a href="#">Wild Gurez Escape</a></h3>
-								<p class="timespan"><a href="#">8 Days, 7 Nights</a></p>
-								<p class="description">Venture on an 8-day, 7-night in Kashmir, exploring the enchanting Gurez Valley’s hidden beauty!</p>
-								<p class="location"><span onclick="window.location.href='gurez.html'">Details</span></p>
-							</div>
+				</div>
+
+				<div class="col-md-4 ftco-animate">
+					<div class="project-wrap">
+						<a href="#" class="img" style="background-image: url(images/gulmarg2.webp);">
+							<span class="price">A Spiritual Odyssey</span>
+						</a>
+						<div class="text p-4">
+
+							<h3><a href="#">Vaishno Devi Trek</a></h3>
+							<p class="timespan"><a href="#">4 Days, 3 Nights</a></p>
+							<p class="description">Embark on a divine trek to Vaishno Devi, a 4-day, 3-night spiritual
+								odyssey of faith & transcendence!</p>
+							<p class="location"><span onclick="window.location.href='vaishnodevi.html'">Details</span>
+							</p>
 						</div>
 					</div>
-					<div class="col-md-4 ftco-animate">
-						<div class="project-wrap">
-							<a href="#" class="img" style="background-image: url(images/kashmirromance2.jpg);">
-								<span class="price">Romance In Kashmir</span>
-							</a>
-							<div class="text p-4">
-					
-								<h3><a href="#">Honeymoon Escape</a></h3>
-								<p class="timespan"><a href="#">7 Days, 6 Nights</a></p>
-								<p class="description">Indulge in the serenity of Romance - a dreamy honeymoon escape filled with love, trust & beauty.</p>
-								<p class="location"><span onclick="window.location.href='romance.html'">Details</span></p>
-							</div>
+				</div>
+				<div class="col-md-4 ftco-animate">
+					<div class="project-wrap">
+						<a href="#" class="img" style="background-image: url(images/gurezvalley2.webp);">
+							<span class="price">Kashmir Odyssey</span>
+						</a>
+						<div class="text p-4">
+
+							<h3><a href="#">Wild Gurez Escape</a></h3>
+							<p class="timespan"><a href="#">8 Days, 7 Nights</a></p>
+							<p class="description">Venture on an 8-day, 7-night in Kashmir, exploring the enchanting
+								Gurez Valley’s hidden beauty!</p>
+							<p class="location"><span onclick="window.location.href='gurez.html'">Details</span></p>
 						</div>
 					</div>
-					<div class="col-md-4 ftco-animate">
-						<div class="project-wrap">
-							<a href="#" class="img" style="background-image: url(images/ladakh5.webp);">
-								<span class="price">Mystic Ladakh</span>
-							</a>
-							<div class="text p-4">
-					
-								<h3><a href="#">Ladakh Expedition</a></h3>
-								<p class="timespan"><a href="#">7 Days, 6 Nights</a></p>
-								<p class="description">Set off on a Mystic Ladakh Expedition - seven days, six nights of breathtaking landscapes.</p>
-								<p class="location"><span onclick="window.location.href='ladakhexp.html'">Details</span></p>
-							</div>
+				</div>
+				<div class="col-md-4 ftco-animate">
+					<div class="project-wrap">
+						<a href="#" class="img" style="background-image: url(images/kashmirromance2.jpg);">
+							<span class="price">Romance In Kashmir</span>
+						</a>
+						<div class="text p-4">
+
+							<h3><a href="#">Honeymoon Escape</a></h3>
+							<p class="timespan"><a href="#">7 Days, 6 Nights</a></p>
+							<p class="description">Indulge in the serenity of Romance - a dreamy honeymoon escape filled
+								with love, trust & beauty.</p>
+							<p class="location"><span onclick="window.location.href='romance.html'">Details</span></p>
 						</div>
 					</div>
-					<div class="col-md-4 ftco-animate">
-						<div class="project-wrap">
-							<a href="#" class="img" style="background-image: url(images/himalayanladakh.webp);">
-								<span class="price">Heveanly Ladakh</span>
-							</a>
-							<div class="text p-4">
-					
-								<h3><a href="#">Himalayan Odyssey</a></h3>
-								<p class="timespan"><a href="#">8 Days, 7 Nights</a></p>
-								<p class="description">Venture on a Heavenly Ladakh Expedition - eight days, seven nights of a serene & spiritual quest.</p>
-								<p class="location"><span onclick="window.location.href='ladakhhev.html'">Details</span></p>
-							</div>
+				</div>
+				<div class="col-md-4 ftco-animate">
+					<div class="project-wrap">
+						<a href="#" class="img" style="background-image: url(images/ladakh5.webp);">
+							<span class="price">Mystic Ladakh</span>
+						</a>
+						<div class="text p-4">
+
+							<h3><a href="#">Ladakh Expedition</a></h3>
+							<p class="timespan"><a href="#">7 Days, 6 Nights</a></p>
+							<p class="description">Set off on a Mystic Ladakh Expedition - seven days, six nights of
+								breathtaking landscapes.</p>
+							<p class="location"><span onclick="window.location.href='ladakhexp.html'">Details</span></p>
 						</div>
 					</div>
-					<div class="col-md-4 ftco-animate">
-						<div class="project-wrap">
-							<a href="#" class="img" style="background-image: url(images/spiritualladakh.webp);">
-								<span class="price">Spiritual Sojourn</span>
-							</a>
-							<div class="text p-4">
-					
-								<h3><a href="#">Buddhist Monasteries</a></h3>
-								<p class="timespan"><a href="#">9 Days, 8 Nights</a></p>
-								<p class="description">Enjoy a Buddhist Spiritual quest for nine days, eight nights, exploring peaceful & sacred monasteries.</p>
-								<p class="location"><span onclick="window.location.href='kashmirspi.html'">Details</span></p>
-							</div>
+				</div>
+				<div class="col-md-4 ftco-animate">
+					<div class="project-wrap">
+						<a href="#" class="img" style="background-image: url(images/himalayanladakh.webp);">
+							<span class="price">Heveanly Ladakh</span>
+						</a>
+						<div class="text p-4">
+
+							<h3><a href="#">Himalayan Odyssey</a></h3>
+							<p class="timespan"><a href="#">8 Days, 7 Nights</a></p>
+							<p class="description">Venture on a Heavenly Ladakh Expedition - eight days, seven nights of
+								a serene & spiritual quest.</p>
+							<p class="location"><span onclick="window.location.href='ladakhhev.html'">Details</span></p>
 						</div>
 					</div>
-					<div class="col-md-4 ftco-animate">
-						<div class="project-wrap">
-							<a href="#" class="img" style="background-image: url(images/ladakhsports.webp);">
-								<span class="price">Ladakh Adventure</span>
-							</a>
-							<div class="text p-4">
-					
-								<h3><a href="#">Sports & Activities</a></h3>
-								<p class="timespan"><a href="#">10 Days, 9 Nights</a></p>
-								<p class="description">Join the Ladakh Adventure Trail for ten days, nine nights, experiencing sports with thrilling experiences.</p>
-								<p class="location"><span onclick="window.location.href='ladakhadv.html'">Details</span></p>
-							</div>
+				</div>
+				<div class="col-md-4 ftco-animate">
+					<div class="project-wrap">
+						<a href="#" class="img" style="background-image: url(images/spiritualladakh.webp);">
+							<span class="price">Spiritual Sojourn</span>
+						</a>
+						<div class="text p-4">
+
+							<h3><a href="#">Buddhist Monasteries</a></h3>
+							<p class="timespan"><a href="#">9 Days, 8 Nights</a></p>
+							<p class="description">Enjoy a Buddhist Spiritual quest for nine days, eight nights,
+								exploring peaceful & sacred monasteries.</p>
+							<p class="location"><span onclick="window.location.href='kashmirspi.html'">Details</span>
+							</p>
 						</div>
 					</div>
-					<div class="col-md-4 ftco-animate">
-						<div class="project-wrap">
-							<a href="#" class="img" style="background-image: url(images/leh.webp);">
-								<span class="price">Ladakh Exploration</span>
-							</a>
-							<div class="text p-4">
-					
-								<h3><a href="#">Journey To The Leh </a></h3>
-								<p class="timespan"><a href="#">6 Days, 5 Nights</a></p>
-								<p class="description">Discover The Leh Ladakh Package for six days, five nights, exploring the stunning, & vibrant landscapes.</p>
-								<p class="location"><span onclick="window.location.href='ladakhexl.html'">Details</span></p>
-							</div>
+				</div>
+				<div class="col-md-4 ftco-animate">
+					<div class="project-wrap">
+						<a href="#" class="img" style="background-image: url(images/ladakhsports.webp);">
+							<span class="price">Ladakh Adventure</span>
+						</a>
+						<div class="text p-4">
+
+							<h3><a href="#">Sports & Activities</a></h3>
+							<p class="timespan"><a href="#">10 Days, 9 Nights</a></p>
+							<p class="description">Join the Ladakh Adventure Trail for ten days, nine nights,
+								experiencing sports with thrilling experiences.</p>
+							<p class="location"><span onclick="window.location.href='ladakhadv.html'">Details</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 ftco-animate">
+					<div class="project-wrap">
+						<a href="#" class="img" style="background-image: url(images/leh.webp);">
+							<span class="price">Ladakh Exploration</span>
+						</a>
+						<div class="text p-4">
+
+							<h3><a href="#">Journey To The Leh </a></h3>
+							<p class="timespan"><a href="#">6 Days, 5 Nights</a></p>
+							<p class="description">Discover The Leh Ladakh Package for six days, five nights, exploring
+								the stunning, & vibrant landscapes.</p>
+							<p class="location"><span onclick="window.location.href='ladakhexl.html'">Details</span></p>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 	</section>
 	<!-- <section class="ftco-section ftco-about img"style="background-image: url(images/bg_4.jpg);">
 			<div class="overlay"></div>
@@ -724,123 +779,138 @@
 			</div>
 	</section> -->
 	<section class="ftco-section testimony-section bg-bottom" style="background-image: url(images/bg_1.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row justify-content-center pb-4">
-					<div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-						<span class="subheading">Testimonial</span>
-						<h2 class="mb-4">Tourist Feedback</h2>
-					</div>
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row justify-content-center pb-4">
+				<div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+					<span class="subheading">Testimonial</span>
+					<h2 class="mb-4">Tourist Feedback</h2>
 				</div>
-				<div class="row ftco-animate">
-					<div class="col-md-12">
-						<div class="carousel-testimony owl-carousel">
-							<div class="item">
-								<div class="testimony-wrap py-4">
-									<div class="text">
-										<p class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</p>
-										<p class="mb-4">My experience with Capture Kashmir Tour and Travels is excellent and especially co-ordinator mehak lala is very cooperative overall my tour was very value to budget.</p>
-										<a href='https://g.co/kgs/SsZjHMK' class="readmore" target="_blank">Read&nbspMore</a>
-										<div class="d-flex align-items-center">
-											<div class="user-img" style="background-image: url(images/review1.jpg)"></div>
-											<div class="pl-3">
-												<p class="name">Maqsood Alam</p>
-												<span class="position">Tourist</span>
-											</div>
+			</div>
+			<div class="row ftco-animate">
+				<div class="col-md-12">
+					<div class="carousel-testimony owl-carousel">
+						<div class="item">
+							<div class="testimony-wrap py-4">
+								<div class="text">
+									<p class="star">
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</p>
+									<p class="mb-4">My experience with Capture Kashmir Tour and Travels is excellent and
+										especially co-ordinator mehak lala is very cooperative overall my tour was very
+										value to budget.</p>
+									<a href='https://g.co/kgs/SsZjHMK' class="readmore"
+										target="_blank">Read&nbspMore</a>
+									<div class="d-flex align-items-center">
+										<div class="user-img" style="background-image: url(images/review1.jpg)"></div>
+										<div class="pl-3">
+											<p class="name">Maqsood Alam</p>
+											<span class="position">Tourist</span>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="testimony-wrap py-4">
-									<div class="text">
-										<p class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</p>
-										<p class="mb-4">My Kashmir trip was through Capture Travels and I really appreciate their services. We enjoyed our trip and they were very flexible with the end moment changes we wanted. It was a beautiful and budget friendly trip.</p>
-										<a href='https://g.co/kgs/iQuPNHu' class="readmore" target="_blank">Read&nbspMore</a>
-										<div class="d-flex align-items-center">
-											<div class="user-img" style="background-image: url(images/review3.jpg)"></div>
-											<div class="pl-3">
-												<p class="name">Manisha Bhatia</p>
-												<span class="position">Tourist</span>
-											</div>
+						</div>
+						<div class="item">
+							<div class="testimony-wrap py-4">
+								<div class="text">
+									<p class="star">
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</p>
+									<p class="mb-4">My Kashmir trip was through Capture Travels and I really appreciate
+										their services. We enjoyed our trip and they were very flexible with the end
+										moment changes we wanted. It was a beautiful and budget friendly trip.</p>
+									<a href='https://g.co/kgs/iQuPNHu' class="readmore"
+										target="_blank">Read&nbspMore</a>
+									<div class="d-flex align-items-center">
+										<div class="user-img" style="background-image: url(images/review3.jpg)"></div>
+										<div class="pl-3">
+											<p class="name">Manisha Bhatia</p>
+											<span class="position">Tourist</span>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="testimony-wrap py-4">
-									<div class="text">
-										<p class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</p>
-										<p class="mb-4">The tour was organised very well the stay, food and travel was very satisfactory, the driver was very cooperative. Thanks to capture kashmir tours.</p>
-										<a href='https://g.co/kgs/9ytYMVZ' class="readmore" target="_blank">Read&nbspMore</a>
-										<div class="d-flex align-items-center">
-											<div class="user-img" style="background-image: url(images/review2.jpg)"></div>
-											<div class="pl-3">
-												<p class="name">Jitendra Prasand</p>
-												<span class="position">Tourist</span>
-											</div>
+						</div>
+						<div class="item">
+							<div class="testimony-wrap py-4">
+								<div class="text">
+									<p class="star">
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</p>
+									<p class="mb-4">The tour was organised very well the stay, food and travel was very
+										satisfactory, the driver was very cooperative. Thanks to capture kashmir tours.
+									</p>
+									<a href='https://g.co/kgs/9ytYMVZ' class="readmore"
+										target="_blank">Read&nbspMore</a>
+									<div class="d-flex align-items-center">
+										<div class="user-img" style="background-image: url(images/review2.jpg)"></div>
+										<div class="pl-3">
+											<p class="name">Jitendra Prasand</p>
+											<span class="position">Tourist</span>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="testimony-wrap py-4">
-									<div class="text">
-										<p class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</p>
-										<p class="mb-4">Capture Kashmir provided us a very nice hospitality in Kashmir. Driver Aadil is an excellent person. We had a very nice experience with him during our whole trip</p>
-										<a href='https://g.co/kgs/U6MutYG' class="readmore" target="_blank">Read&nbspMore</a>
-										<div class="d-flex align-items-center">
-											<div class="user-img" style="background-image: url(images/review5.jpg)"></div>
-											<div class="pl-3">
-												<p class="name">Avinash Kumar</p>
-												<span class="position">Tourist</span>
-											</div>
+						</div>
+						<div class="item">
+							<div class="testimony-wrap py-4">
+								<div class="text">
+									<p class="star">
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</p>
+									<p class="mb-4">Capture Kashmir provided us a very nice hospitality in Kashmir.
+										Driver Aadil is an excellent person. We had a very nice experience with him
+										during our whole trip</p>
+									<a href='https://g.co/kgs/U6MutYG' class="readmore"
+										target="_blank">Read&nbspMore</a>
+									<div class="d-flex align-items-center">
+										<div class="user-img" style="background-image: url(images/review5.jpg)"></div>
+										<div class="pl-3">
+											<p class="name">Avinash Kumar</p>
+											<span class="position">Tourist</span>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="testimony-wrap py-4">
-									<div class="text">
-										<p class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</p>
-										<p class="mb-4">We enjoyed a lot in Kashmir. They have provided us very good hotels. Food was great. Driver provided to us was also good. He has cooperated with us very nicely. We had a great trip. They have resolved all our issues instantly</p>
-										<a href='https://g.co/kgs/TeM24eS' class="readmore" target="_blank">Read&nbspMore</a>
-										<div class="d-flex align-items-center">
-											<div class="user-img" style="background-image: url(images/review4.jpg)"></div>
-											<div class="pl-3">
-												<p class="name">Sayantan Pal</p>
-												<span class="position">Tourist</span>
-											</div>
+						</div>
+						<div class="item">
+							<div class="testimony-wrap py-4">
+								<div class="text">
+									<p class="star">
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</p>
+									<p class="mb-4">We enjoyed a lot in Kashmir. They have provided us very good hotels.
+										Food was great. Driver provided to us was also good. He has cooperated with us
+										very nicely. We had a great trip. They have resolved all our issues instantly
+									</p>
+									<a href='https://g.co/kgs/TeM24eS' class="readmore"
+										target="_blank">Read&nbspMore</a>
+									<div class="d-flex align-items-center">
+										<div class="user-img" style="background-image: url(images/review4.jpg)"></div>
+										<div class="pl-3">
+											<p class="name">Sayantan Pal</p>
+											<span class="position">Tourist</span>
 										</div>
 									</div>
 								</div>
@@ -849,6 +919,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 	</section>
 
 	<!-- <section class="ftco-section">
@@ -923,94 +994,102 @@
 				</div>
 			</div>
 	</section> -->
-	
+
 	<section class="ftco-intro ftco-section ftco-no-pt">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-12 text-center">
-						<div class="img"  style="background-image: url(images/bg_2.jpg);">
-							<div class="overlay"></div>
-							<h2>Secure Your Journey with Capture Kashmir</h2>
-							<p>Book your dream Kashmir experience with us. Complete your payment and let the adventure begin!</p>
-							<p class="mb-0 d-flex justify-content-center align-items-center">
-								
-									<form class="paymentclass">
-										<script src="https://checkout.razorpay.com/v1/payment-button.js" 
-											data-payment_button_id="pl_Pmvy00UtwberdB" 
-											async> 
-										</script> 
-									</form>
-								
-							</p>
-						</div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-12 text-center">
+					<div class="img" style="background-image: url(images/bg_2.jpg);">
+						<div class="overlay"></div>
+						<h2>Secure Your Journey with Capture Kashmir</h2>
+						<p>Book your dream Kashmir experience with us. Complete your payment and let the adventure
+							begin!</p>
+						<p class="mb-0 d-flex justify-content-center align-items-center">
+
+						<form class="paymentclass">
+							<script src="https://checkout.razorpay.com/v1/payment-button.js"
+								data-payment_button_id="pl_Pmvy00UtwberdB" async>
+								</script>
+						</form>
+
+						</p>
 					</div>
 				</div>
 			</div>
+		</div>
 	</section>
-	<footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
-			<div class="container">
-				<div class="row mb-5">
-					<div class="col-md pt-5">
-						<div class="ftco-footer-widget pt-md-5 mb-4">
-							<h2 class="ftco-heading-2">About</h2>
-							<p>Capture Kashmir takes you on a journey through its stunning valleys, serene lakes, majestic mountains, & enchanting landscapes unveiling paradise’s beauty.</p>
-							<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-								<li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
-								<li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-								<li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md pt-5 border-left">
-						<div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
-							<h2 class="ftco-heading-2">Infromation</h2>
-							<ul class="list-unstyled">
-								<li><a href="#" class="py-2 d-block">Home</a></li>
-								<li><a href="#" class="py-2 d-block">About</a></li>
-								<li><a href="#" class="py-2 d-block">Destination</a></li>
-								<li><a href="#" class="py-2 d-block">Contact</a></li>
-								<!-- <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
-								<li><a href="#" class="py-2 d-block">Call Us</a></li> -->
-							</ul>
-						</div>
-					</div>
-					<div class="col-md pt-5 border-left">
-						<div class="ftco-footer-widget pt-md-5 mb-4">
-							<h2 class="ftco-heading-2">Packages</h2>
-							<ul class="list-unstyled">
-								<li><a href="#" class="py-2 d-block">Srinagar Splendour</a></li>
-								<li><a href="#" class="py-2 d-block">Valleys Of Kashmir</a></li>
-								<li><a href="#" class="py-2 d-block">Essence Of Kashmir</a></li>
-								<li><a href="#" class="py-2 d-block">Vaishno Devi Trek</a></li>
-								<li><a href="#" class="py-2 d-block">Wild Gurez Escape</a></li>
-								<li><a href="#" class="py-2 d-block">Honeymoon Escape</a></li>
-								<li><a href="#" class="py-2 d-block">Ladakh Expedition</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md pt-5 border-left">
-						<div class="ftco-footer-widget pt-md-5 mb-4">
-							<h2 class="ftco-heading-2">Have a Questions?</h2>
-							<div class="block-23 mb-3">
-								<ul>
-									<li><span class="icon fa fa-map-marker"></span><span class="text">Gulmarg Road Shalteng HMT Srinagar J&K, 190012</span></li>
-									<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">9906518172</span></a></li>
-									<li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text" style="overflow-wrap: anywhere;">info@capturekashmirtours.in</span></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
+	<footer class="ftco-footer bg-bottom ftco-no-pt">
+		<div class="container">
+		  <div class="row mb-5">
+			<div class="col-md pt-5">
+			  <div class="ftco-footer-widget pt-md-5 mb-4">
+				<h2 class="ftco-heading-2">About</h2>
+				<p>Capture Kashmir takes you on a journey through its stunning valleys, serene lakes, majestic
+				  mountains, & enchanting landscapes unveiling paradise’s beauty.</p>
+				<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+				  <li class="ftco-animate"><a target="_blank" href="https://www.facebook.com/share/15AyCo7jmr/"><span class="fa fa-facebook"></span></a></li>
+				  <li class="ftco-animate"><a target="_blank" href="https://www.instagram.com/capture_kashmir_tours?igsh=MTNjYW53c3FmeTJ3OQ=="><span class="fa fa-instagram"></span></a></li>
+				</ul>
+			  </div>
+			</div>
+			<div class="col-md pt-5 border-left">
+			  <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+				<h2 class="ftco-heading-2">Infromation</h2>
+				<ul class="list-unstyled">
+				  <li><a href="/index.html" class="py-2 d-block">Home</a></li>
+				  <li><a href="/about.html" class="py-2 d-block">About</a></li>
+				  <li><a href="/destination.html" class="py-2 d-block">Destination</a></li>
+				  <li><a href="/contact.html" class="py-2 d-block">Contact</a></li>
+				  <!-- <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
+					<li><a href="#" class="py-2 d-block">Call Us</a></li> -->
+				</ul>
+			  </div>
+			</div>
+			<div class="col-md pt-5 border-left">
+			  <div class="ftco-footer-widget pt-md-5 mb-4">
+				<h2 class="ftco-heading-2">Packages</h2>
+				<ul class="list-unstyled">
+				  <li><a href="#" class="py-2 d-block">Srinagar Splendour</a></li>
+				  <li><a href="#" class="py-2 d-block">Valleys Of Kashmir</a></li>
+				  <li><a href="#" class="py-2 d-block">Essence Of Kashmir</a></li>
+				  <li><a href="#" class="py-2 d-block">Vaishno Devi Trek</a></li>
+				  <li><a href="#" class="py-2 d-block">Wild Gurez Escape</a></li>
+				  <li><a href="#" class="py-2 d-block">Honeymoon Escape</a></li>
+				  <li><a href="#" class="py-2 d-block">Ladakh Expedition</a></li>
+				</ul>
+			  </div>
+			</div>
+			<div class="col-md pt-5 border-left">
+			  <div class="ftco-footer-widget pt-md-5 mb-4">
+				<h2 class="ftco-heading-2">Have a Questions?</h2>
+				<div class="block-23 mb-3">
+				  <ul>
+					<li><span class="icon fa fa-map-marker"></span><span class="text">Gulmarg Road Shalteng
+						HMT Srinagar J&K, 190012</span></li>
+					<li><a href="#"><span class="icon fa fa-phone"></span><span
+						  class="text">9906518172</span></a></li>
+					<li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text"
+						  style="overflow-wrap: anywhere;">info@capturekashmirtours.in</span></a></li>
+				  </ul>
 				</div>
-				<div class="row">
-					<div class="col-md-12 text-center">
-
-						<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Capture Kashmir</a>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-						</div>
-					</div>
-				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-12 text-center">
+	  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Copyright &copy;
+				<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+				is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
+				  target="_blank">Capture Kashmir</a>
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			  </p>
+			</div>
+		  </div>
+		</div>
 	</footer>
+	  
 	<script>
 		document.querySelectorAll('.location').forEach(location => {
 			location.addEventListener('mouseover', () => {
@@ -1036,7 +1115,11 @@
 
 	</script>
 	<!-- loader -->
-	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-migrate-3.0.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
@@ -1049,8 +1132,10 @@
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/bootstrap-datepicker.js"></script>
 	<script src="js/scrollax.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 	<script src="js/google-map.js"></script>
-	<script src="js/main.js"></script>		
-	</body>
-	</html>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

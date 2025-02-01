@@ -16,29 +16,122 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/style.css">
   <script defer async src='https://cdn.trustindex.io/loader-cert.js?f0324bf40d4249048706245e516'></script>
+  <style>
+    .nav-item {
+			z-index: 1;
+		}
+
+		.rightbtn {
+			transform: translateX(-6vw);
+			z-index: 0;
+		}
+
+		.rightbtn a {
+			transform: translateX(10vw);
+			/* margin-left: 100px; */
+			display: flex;
+			flex-direction: row;
+		}
+
+		.timespan a {
+			font-weight: bold;
+		}
+
+		.bg-orange {
+			background-color: white !important;
+			/* color: #f15d30 !important; */
+			transform: translate(10px, -3px) !important;
+			/* border: solid 1px #f15d30 !important; */
+			box-shadow: 0 0 0px grey;
+			transition: 1s;
+		}
+
+		.bg-orange:hover {
+			/* background-color:  !important; */
+			color: #f15d30 !important;
+			box-shadow: 0 0 5px grey;
+		}
+
+		.p-2-5 {
+			padding: 10px 10px !important;
+			border-radius: 4px !important;
+		}
+
+		.rightbtnp {
+			margin: -7px 0px 0px 30px;
+			border-radius: 4px;
+			background: #f15d30;
+			padding: 7px 20px;
+			color: white;
+			min-width: 120px;
+			text-align: center;
+
+		}
+
+		@media (max-width: 1027px) {
+			.rightbtn {
+				transform: translate(0, -10px);
+
+			}
+
+			.rightbtn a {
+				flex-direction: column !important;
+				max-width: 200px;
+				transform: translate(0);
+			}
+
+			.rightbtnp {
+				margin: 0;
+				padding: .5rem 0;
+				background: transparent;
+				color: black;
+				text-align: left;
+				transition: .4s;
+			}
+
+			.rightbtnp:hover {
+				color: green;
+			}
+
+			#ftco-nav {
+				transform: translateX(10px);
+			}
+		}
+  </style>
 </head>
 <body>
- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-white ftco-navbar-light" id="ftco-navbar">
-   <div class="container">
-      <a class="navbar-brand imagebox" href="index.html">
-        <img src="images/logo.jpg.jpg" class="img-fluid w-25" alt=""></span>
-      </a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="oi oi-menu"></span> Menu
-     </button>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-white ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
 
-     <div class="collapse navbar-collapse" id="ftco-nav">
-       <ul class="navbar-nav ml-auto">
-         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-         <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
-         <!-- <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li> -->
-         <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
-         <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
-       </ul>
-     </div>
-   </div>
- </nav>
+			<a class="navbar-brand imagebox" href="index.html">
+				<img src="images/logo.jpg.jpg" class="img-fluid w-25" alt=""></span>
+			</a>
+			<button class="navbar-toggler bg-orange p-2-5" type="button" data-toggle="collapse" data-target="#ftco-nav"
+				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu&nbsp&nbsp<i class="fa-solid fa-bars fa-xl famenu"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<!-- <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="blog.html" class="nav-link">About</a></li>
+					<li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
+					<li class="nav-item"><a href="hotel.html" class="nav-link">Packages</a></li>
+					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
+					<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+					<li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
+					<!-- <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li> -->
+					<!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
+					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+					<li class="nav-item rightbtn"><a href="#" class="nav-link nav-rbtn">
+							<p class="rightbtnp">Pay&nbspUs</p>
+							<p class="rightbtnp">Donate&nbspUs</p>
+						</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- END nav -->
  <!-- END nav -->
  
  <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg');">
@@ -155,17 +248,17 @@
 </section>
 
 
-<footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
+<footer class="ftco-footer bg-bottom ftco-no-pt">
   <div class="container">
     <div class="row mb-5">
       <div class="col-md pt-5">
         <div class="ftco-footer-widget pt-md-5 mb-4">
           <h2 class="ftco-heading-2">About</h2>
-          <p>Capture Kashmir takes you on a journey through its stunning valleys, serene lakes, majestic mountains, & enchanting landscapes unveiling paradise’s beauty.</p>
+          <p>Capture Kashmir takes you on a journey through its stunning valleys, serene lakes, majestic
+            mountains, & enchanting landscapes unveiling paradise’s beauty.</p>
           <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-            <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
-            <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-            <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+            <li class="ftco-animate"><a target="_blank" href="https://www.facebook.com/share/15AyCo7jmr/"><span class="fa fa-facebook"></span></a></li>
+            <li class="ftco-animate"><a target="_blank" href="https://www.instagram.com/capture_kashmir_tours?igsh=MTNjYW53c3FmeTJ3OQ=="><span class="fa fa-instagram"></span></a></li>
           </ul>
         </div>
       </div>
@@ -173,12 +266,12 @@
         <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
           <h2 class="ftco-heading-2">Infromation</h2>
           <ul class="list-unstyled">
-            <li><a href="#" class="py-2 d-block">Home</a></li>
-            <li><a href="#" class="py-2 d-block">About</a></li>
-            <li><a href="#" class="py-2 d-block">Destination</a></li>
-            <li><a href="#" class="py-2 d-block">Contact</a></li>
+            <li><a href="/index.html" class="py-2 d-block">Home</a></li>
+            <li><a href="/about.html" class="py-2 d-block">About</a></li>
+            <li><a href="/destination.html" class="py-2 d-block">Destination</a></li>
+            <li><a href="/contact.html" class="py-2 d-block">Contact</a></li>
             <!-- <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
-            <li><a href="#" class="py-2 d-block">Call Us</a></li> -->
+              <li><a href="#" class="py-2 d-block">Call Us</a></li> -->
           </ul>
         </div>
       </div>
@@ -198,12 +291,15 @@
       </div>
       <div class="col-md pt-5 border-left">
         <div class="ftco-footer-widget pt-md-5 mb-4">
-          <h2 class="ftco-heading-2">Have a Question?</h2>
+          <h2 class="ftco-heading-2">Have a Questions?</h2>
           <div class="block-23 mb-3">
             <ul>
-              <li><span class="icon fa fa-map-marker"></span><span class="text">Gulmarg Road Shalteng HMT Srinagar J&K, 190012</span></li>
-              <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">9906518172</span></a></li>
-              <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text" style="overflow-wrap: anywhere;">info@capturekashmirtours.in</span></a></li>
+              <li><span class="icon fa fa-map-marker"></span><span class="text">Gulmarg Road Shalteng
+                  HMT Srinagar J&K, 190012</span></li>
+              <li><a href="#"><span class="icon fa fa-phone"></span><span
+                    class="text">9906518172</span></a></li>
+              <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text"
+                    style="overflow-wrap: anywhere;">info@capturekashmirtours.in</span></a></li>
             </ul>
           </div>
         </div>
@@ -213,11 +309,15 @@
       <div class="col-md-12 text-center">
 
         <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-        </div>
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+          is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
+            target="_blank">Capture Kashmir</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
       </div>
     </div>
+  </div>
 </footer>
 
 
