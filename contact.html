@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Capture Kashmir</title>
   <meta charset="utf-8">
@@ -18,328 +19,339 @@
   <script defer async src='https://cdn.trustindex.io/loader-cert.js?f0324bf40d4249048706245e516'></script>
   <style>
     .nav-item {
-			z-index: 1;
-		}
+      z-index: 1;
+    }
 
-		.rightbtn {
-			transform: translateX(-6vw);
-			z-index: 0;
-		}
+    .rightbtn {
+      transform: translateX(-6vw);
+      z-index: 0;
+    }
 
-		.rightbtn a {
-			transform: translateX(10vw);
-			/* margin-left: 100px; */
-			display: flex;
-			flex-direction: row;
-		}
+    .rightbtn a {
+      transform: translateX(10vw);
+      /* margin-left: 100px; */
+      display: flex;
+      flex-direction: row;
+    }
 
-		.timespan a {
-			font-weight: bold;
-		}
+    .timespan a {
+      font-weight: bold;
+    }
 
-		.bg-orange {
-			background-color: white !important;
-			/* color: #f15d30 !important; */
-			transform: translate(10px, -3px) !important;
-			/* border: solid 1px #f15d30 !important; */
-			box-shadow: 0 0 0px grey;
-			transition: 1s;
-		}
+    .bg-orange {
+      background-color: white !important;
+      /* color: #f15d30 !important; */
+      transform: translate(10px, -3px) !important;
+      /* border: solid 1px #f15d30 !important; */
+      box-shadow: 0 0 0px grey;
+      transition: 1s;
+    }
 
-		.bg-orange:hover {
-			/* background-color:  !important; */
-			color: #f15d30 !important;
-			box-shadow: 0 0 5px grey;
-		}
+    .bg-orange:hover {
+      /* background-color:  !important; */
+      color: #f15d30 !important;
+      box-shadow: 0 0 5px grey;
+    }
 
-		.p-2-5 {
-			padding: 10px 10px !important;
-			border-radius: 4px !important;
-		}
+    .p-2-5 {
+      padding: 10px 10px !important;
+      border-radius: 4px !important;
+    }
 
-		.rightbtnp {
-			margin: -7px 0px 0px 30px;
-			border-radius: 4px;
-			background: #f15d30;
-			padding: 7px 20px;
-			color: white;
-			min-width: 120px;
-			text-align: center;
+    .rightbtnp {
+      margin: -7px 0px 0px 30px;
+      border-radius: 4px;
+      background: #f15d30;
+      padding: 7px 20px;
+      color: white;
+      min-width: 120px;
+      text-align: center;
 
-		}
+    }
 
-		@media (max-width: 1027px) {
-			.rightbtn {
-				transform: translate(0, -10px);
+    @media (max-width: 1027px) {
+      .rightbtn {
+        transform: translate(0, -10px);
 
-			}
+      }
 
-			.rightbtn a {
-				flex-direction: column !important;
-				max-width: 200px;
-				transform: translate(0);
-			}
+      .rightbtn a {
+        flex-direction: column !important;
+        max-width: 200px;
+        transform: translate(0);
+      }
 
-			.rightbtnp {
-				margin: 0;
-				padding: .5rem 0;
-				background: transparent;
-				color: black;
-				text-align: left;
-				transition: .4s;
-			}
+      .rightbtnp {
+        margin: 0;
+        padding: .5rem 0;
+        background: transparent;
+        color: black;
+        text-align: left;
+        transition: .4s;
+      }
 
-			.rightbtnp:hover {
-				color: green;
-			}
+      .rightbtnp:hover {
+        color: green;
+      }
 
-			#ftco-nav {
-				transform: translateX(10px);
-			}
-		}
+      #ftco-nav {
+        transform: translateX(10px);
+      }
+    }
   </style>
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-white ftco-navbar-light" id="ftco-navbar">
-		<div class="container">
+    <div class="container">
 
-			<a class="navbar-brand imagebox" href="index.html">
-				<img src="images/logo.jpg.jpg" class="img-fluid w-25" alt=""></span>
-			</a>
-			<button class="navbar-toggler bg-orange p-2-5" type="button" data-toggle="collapse" data-target="#ftco-nav"
-				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu&nbsp&nbsp<i class="fa-solid fa-bars fa-xl famenu"></i>
-			</button>
-			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav ml-auto">
-					<!-- <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+      <a class="navbar-brand imagebox" href="index.html">
+        <img src="images/logo.jpg.jpg" class="img-fluid w-25" alt=""></span>
+      </a>
+      <button class="navbar-toggler bg-orange p-2-5" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu&nbsp&nbsp<i class="fa-solid fa-bars fa-xl famenu"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <!-- <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">About</a></li>
 					<li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
 					<li class="nav-item"><a href="hotel.html" class="nav-link">Packages</a></li>
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
-					<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-					<li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
-					<!-- <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li> -->
-					<!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
-					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-					<li class="nav-item rightbtn"><a href="#" class="nav-link nav-rbtn">
-							<p class="rightbtnp">Pay&nbspUs</p>
-							<p class="rightbtnp">Donate&nbspUs</p>
-						</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- END nav -->
- <!-- END nav -->
- 
- <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg');">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
-      <div class="col-md-9 ftco-animate pb-5 text-center">
-       <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Contact us <i class="fa fa-chevron-right"></i></span></p>
-       <h1 class="mb-0 bread">Contact us</h1>
-     </div>
-   </div>
- </div>
-</section>
-
-<section class="ftco-section ftco-no-pb contact-section mb-4">
-  <div class="container">
-    <div class="row d-flex contact-info">
-      <div class="col-md-3 d-flex">
-       <div class="align-self-stretch box p-4 text-center">
-        <div class="icon d-flex align-items-center justify-content-center">
-         <span class="fa fa-map-marker"></span>
-       </div>
-       <h3 class="mb-2">Address</h3>
-       <p>Gulmarg Road Shalteng HMT Srinagar J&K, 190012</p>
-     </div>
-   </div>
-   <div class="col-md-3 d-flex">
-     <div class="align-self-stretch box p-4 text-center">
-      <div class="icon d-flex align-items-center justify-content-center">
-       <span class="fa fa-phone"></span>
-     </div>
-     <h3 class="mb-2">Contact Number</h3>
-     <p><a href="tel://9906518172">9906518172</a></p>
-     <p><a href="tel://9103993953">9103993953</a></p>
-
-   </div>
- </div>
- <div class="col-md-6 d-flex">
-   <div class="align-self-stretch box p-4 text-center">
-    <div class="icon d-flex align-items-center justify-content-center">
-     <span class="fa fa-paper-plane"></span>
-   </div>
-   <h3 class="mb-2">Email Address</h3>
-   <p><a href="info@capturekashmirtours.in">info@capturekashmirtours.in</a></p>
-   <p><a href="reservation@capturekashmirtours.in">reservation@capturekashmirtours.in</a></p>
- </div>
-</div>
-<div class="col-md-12 d-flex mt-4">
- <div class="align-self-stretch box p-4 text-center">
-  <div class="icon d-flex align-items-center justify-content-center">
-   <span class="fa fa-globe"></span>
- </div>
- <h3 class="mb-2">Website</h3>
- <p><a href="www.capturekashmirtours.in ">www.capturekashmirtours.in </a></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="ftco-section contact-section ftco-no-pt">
-  <div class="container">
-    <div class="row block-9">
-      <div class="col-md-6 order-md-last d-flex">
-        <form action="#" class="bg-light p-5 contact-form">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Name">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Email">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Subject">
-          </div>
-          <div class="form-group">
-            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-          </div>
-          <div class="form-group">
-            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-          </div>
-        </form>
-        
-      </div>
-
-      <div class="col-md-6 d-flex">
-       <div id="map" class="bg-white"></div>
-     </div>
-   </div>
- </div>
-</section>
-
-<section class="ftco-intro ftco-section ftco-no-pt">
- <div class="container">
-  <div class="row justify-content-center">
-   <div class="col-md-12 text-center">
-    <div class="img"  style="background-image: url(images/bg_2.jpg);">
-     <div class="overlay"></div>
-     <h2>Secure Your Journey with Capture Kashmir</h2>
-			<p>Book your dream Kashmir experience with us. Complete your payment and let the adventure begin!</p>
-			<p class="mb-0 d-flex justify-content-center align-items-center">
-								
-        <form class="paymentclass">
-          <script src="https://checkout.razorpay.com/v1/payment-button.js" 
-            data-payment_button_id="pl_Pmvy00UtwberdB" 
-            async> 
-          </script> 
-        </form>
-      
-    </p>
-  </div>
- </div>
-</div>
-</div>
-</section>
-
-
-<footer class="ftco-footer bg-bottom ftco-no-pt">
-  <div class="container">
-    <div class="row mb-5">
-    <div class="col-md pt-5">
-      <div class="ftco-footer-widget pt-md-5 mb-4">
-      <h2 class="ftco-heading-2">About</h2>
-      <p>Capture Kashmir takes you on a journey through its stunning valleys, serene lakes, majestic
-        mountains, & enchanting landscapes unveiling paradise’s beauty.</p>
-      <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-        <li class="ftco-animate"><a target="_blank" href="https://www.facebook.com/share/15AyCo7jmr/"><span class="fa fa-facebook"></span></a></li>
-        <li class="ftco-animate"><a target="_blank" href="https://www.instagram.com/capture_kashmir_tours?igsh=MTNjYW53c3FmeTJ3OQ=="><span class="fa fa-instagram"></span></a></li>
-      </ul>
-      </div>
-    </div>
-    <div class="col-md pt-5 border-left">
-      <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
-      <h2 class="ftco-heading-2">Infromation</h2>
-      <ul class="list-unstyled">
-        <li><a href="/index.html" class="py-2 d-block">Home</a></li>
-        <li><a href="/about.html" class="py-2 d-block">About</a></li>
-        <li><a href="/destination.html" class="py-2 d-block">Destination</a></li>
-        <li><a href="/contact.html" class="py-2 d-block">Contact</a></li>
-        <!-- <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
-        <li><a href="#" class="py-2 d-block">Call Us</a></li> -->
-      </ul>
-      </div>
-    </div>
-    <div class="col-md pt-5 border-left">
-      <div class="ftco-footer-widget pt-md-5 mb-4">
-      <h2 class="ftco-heading-2">Packages</h2>
-      <ul class="list-unstyled">
-        <li><a href="#" class="py-2 d-block">Srinagar Splendour</a></li>
-        <li><a href="#" class="py-2 d-block">Valleys Of Kashmir</a></li>
-        <li><a href="#" class="py-2 d-block">Essence Of Kashmir</a></li>
-        <li><a href="#" class="py-2 d-block">Vaishno Devi Trek</a></li>
-        <li><a href="#" class="py-2 d-block">Wild Gurez Escape</a></li>
-        <li><a href="#" class="py-2 d-block">Honeymoon Escape</a></li>
-        <li><a href="#" class="py-2 d-block">Ladakh Expedition</a></li>
-      </ul>
-      </div>
-    </div>
-    <div class="col-md pt-5 border-left">
-      <div class="ftco-footer-widget pt-md-5 mb-4">
-      <h2 class="ftco-heading-2">Have a Questions?</h2>
-      <div class="block-23 mb-3">
-        <ul>
-        <li><span class="icon fa fa-map-marker"></span><span class="text">Gulmarg Road Shalteng
-          HMT Srinagar J&K, 190012</span></li>
-        <li><a href="#"><span class="icon fa fa-phone"></span><span
-            class="text">9906518172</span></a></li>
-        <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text"
-            style="overflow-wrap: anywhere;">info@capturekashmirtours.in</span></a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
+          <!-- <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li> -->
+          <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item rightbtn"><a href="#" class="nav-link nav-rbtn">
+              <p class="rightbtnp">Pay&nbspUs</p>
+              <p class="rightbtnp">Donate&nbspUs</p>
+            </a></li>
         </ul>
       </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+  <!-- END nav -->
+
+  <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+        <div class="col-md-9 ftco-animate pb-5 text-center">
+          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
+                  class="fa fa-chevron-right"></i></a></span> <span>Contact us <i
+                class="fa fa-chevron-right"></i></span></p>
+          <h1 class="mb-0 bread">Contact us</h1>
+        </div>
       </div>
     </div>
+  </section>
+
+  <section class="ftco-section ftco-no-pb contact-section mb-4">
+    <div class="container">
+      <div class="row d-flex contact-info">
+        <div class="col-md-3 d-flex">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fa fa-map-marker"></span>
+            </div>
+            <h3 class="mb-2">Address</h3>
+            <p>Gulmarg Road Shalteng HMT Srinagar J&K, 190012</p>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fa fa-phone"></span>
+            </div>
+            <h3 class="mb-2">Contact Number</h3>
+            <p><a href="tel://9906518172">9906518172</a></p>
+            <p><a href="tel://9103993953">9103993953</a></p>
+
+          </div>
+        </div>
+        <div class="col-md-6 d-flex">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fa fa-paper-plane"></span>
+            </div>
+            <h3 class="mb-2">Email Address</h3>
+            <p><a href="info@capturekashmirtours.in">info@capturekashmirtours.in</a></p>
+            <p><a href="reservation@capturekashmirtours.in">reservation@capturekashmirtours.in</a></p>
+          </div>
+        </div>
+        <div class="col-md-12 d-flex mt-4">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fa fa-globe"></span>
+            </div>
+            <h3 class="mb-2">Website</h3>
+            <p><a href="www.capturekashmirtours.in ">www.capturekashmirtours.in </a></p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="row">
-    <div class="col-md-12 text-center">
-  
-      <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      Copyright &copy;
-      <script>document.write(new Date().getFullYear());</script> All rights reserved <a href="capturekashmir.com"
-        target="_blank">Capture Kashmir</a>
-      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      </p>
+  </section>
+
+  <section class="ftco-section contact-section ftco-no-pt">
+    <div class="container">
+      <div class="row block-9">
+        <div class="col-md-12 order-md-last d-flex">
+          <form action="#" class="bg-light p-5 contact-form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Subject">
+            </div>
+            <div class="form-group">
+              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group text-center">
+              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+            </div>
+          </form>
+
+        </div>
+
+        <!-- <div class="col-md-6 d-flex">
+          <div id="map" class="bg-white"></div>
+        </div> -->
+      </div>
     </div>
+  </section>
+
+  <section class="ftco-intro ftco-section ftco-no-pt">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+          <div class="img" style="background-image: url(images/bg_2.jpg);">
+            <div class="overlay"></div>
+            <h2>Secure Your Journey with Capture Kashmir</h2>
+            <p>Book your dream Kashmir experience with us. Complete your payment and let the adventure begin!</p>
+            <p class="mb-0 d-flex justify-content-center align-items-center">
+
+            <form class="paymentclass">
+              <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                data-payment_button_id="pl_Pmvy00UtwberdB" async>
+                </script>
+            </form>
+
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
+
+
+  <footer class="ftco-footer bg-bottom ftco-no-pt">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md pt-5">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">What we wdo?</h2>
+            <p>We Capture Kashmir Tour and Travels, offering a wide range of services including taxi bookings, hotel
+              accommodations, houseboat bookings, gondola rides, helicopter bookings, customized itineraries, and much
+              more. We strive to provide our customers with seamless and memorable experiences.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+              <li class="ftco-animate"><a target="_blank" href="https://www.facebook.com/share/15AyCo7jmr/"><span
+                    class="fa fa-facebook"></span></a></li>
+              <li class="ftco-animate"><a target="_blank"
+                  href="https://www.instagram.com/capture_kashmir_tours?igsh=MTNjYW53c3FmeTJ3OQ=="><span
+                    class="fa fa-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5 border-left">
+          <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+            <h2 class="ftco-heading-2">Infromation</h2>
+            <ul class="list-unstyled">
+              <li><a href="/index.html" class="py-2 d-block">Home</a></li>
+              <li><a href="/about.html" class="py-2 d-block">About</a></li>
+              <li><a href="/destination.html" class="py-2 d-block">Destination</a></li>
+              <li><a href="/contact.html" class="py-2 d-block">Contact</a></li>
+              <!-- <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
+        <li><a href="#" class="py-2 d-block">Call Us</a></li> -->
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5 border-left">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">Packages</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block">Srinagar Splendour</a></li>
+              <li><a href="#" class="py-2 d-block">Valleys Of Kashmir</a></li>
+              <li><a href="#" class="py-2 d-block">Essence Of Kashmir</a></li>
+              <li><a href="#" class="py-2 d-block">Vaishno Devi Trek</a></li>
+              <li><a href="#" class="py-2 d-block">Wild Gurez Escape</a></li>
+              <li><a href="#" class="py-2 d-block">Honeymoon Escape</a></li>
+              <li><a href="#" class="py-2 d-block">Ladakh Expedition</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5 border-left">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon fa fa-map-marker"></span><span class="text">Gulmarg Road Shalteng
+                    HMT Srinagar J&K, 190012</span></li>
+                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">9906518172</span></a></li>
+                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text"
+                      style="overflow-wrap: anywhere;">info@capturekashmirtours.in</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved <a href="capturekashmir.com"
+              target="_blank">Capture Kashmir</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
 
-<!-- loader -->
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-migrate-3.0.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/jquery.animateNumber.min.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/scrollax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="js/google-map.js"></script>
-<script src="js/main.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
+
 </html>
