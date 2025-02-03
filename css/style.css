@@ -9659,8 +9659,13 @@ textarea.form-control {
   z-index: -1; }
 
 .blog-entry {
+  background: linear-gradient(to top, rgba(200,20,200,.4), rgba(0,20,225,.4));
   position: relative;
   z-index: 0; }
+.blog-entry .block-20{
+  background-image: url("https://i.postimg.cc/59q2dL29/logo-jpg.png") !important;
+  background-size: 60%;
+}
   @media (min-width: 768px) {
     .blog-entry {
       margin-bottom: 30px; } }
@@ -9677,8 +9682,8 @@ textarea.form-control {
     z-index: 1;
     margin-top: -40px;
     background: #fff;
-    min-height: 250px;
-    max-height: 250px;
+    min-height: 200px;
+    max-height: 200px;
     -webkit-box-shadow: 0px 10px 23px -8px rgba(0, 0, 0, 0.11);
     -moz-box-shadow: 0px 10px 23px -8px rgba(0, 0, 0, 0.11);
     box-shadow: 0px 10px 23px -8px rgba(0, 0, 0, 0.11);
@@ -10116,7 +10121,8 @@ textarea.form-control {
 
     .location{
 			/* text-align: center; */
-			transform: translateY(20px);
+			transform: translateY(0px);
+      margin-bottom: 0;
 		}
 		.location span {
 			text-align: center;
