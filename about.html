@@ -23,32 +23,124 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/style.css">
   <script defer async src='https://cdn.trustindex.io/loader-cert.js?f0324bf40d4249048706245e516'></script>
+  <style>
+    .nav-item {
+      z-index: 1;
+    }
+
+    .rightbtn {
+      transform: translateX(-6vw);
+      z-index: 0;
+    }
+
+    .rightbtn a {
+      transform: translateX(10vw);
+      /* margin-left: 100px; */
+      display: flex;
+      flex-direction: row;
+    }
+
+    .timespan a {
+      font-weight: bold;
+    }
+
+    .bg-orange {
+      background-color: white !important;
+      /* color: #f15d30 !important; */
+      transform: translate(10px, -3px) !important;
+      /* border: solid 1px #f15d30 !important; */
+      box-shadow: 0 0 0px grey;
+      transition: 1s;
+    }
+
+    .bg-orange:hover {
+      /* background-color:  !important; */
+      color: #f15d30 !important;
+      box-shadow: 0 0 5px grey;
+    }
+
+    .p-2-5 {
+      padding: 10px 10px !important;
+      border-radius: 4px !important;
+    }
+
+    .rightbtnp {
+      margin: -7px 0px 0px 30px;
+      border-radius: 4px;
+      background: #f15d30;
+      padding: 7px 20px;
+      color: white;
+      min-width: 120px;
+      text-align: center;
+
+    }
+
+    @media (max-width: 1027px) {
+      .rightbtn {
+        transform: translate(0, -10px);
+
+      }
+
+      .rightbtn a {
+        flex-direction: column !important;
+        max-width: 200px;
+        transform: translate(0);
+      }
+
+      .rightbtnp {
+        margin: 0;
+        padding: .5rem 0;
+        background: transparent;
+        color: black;
+        text-align: left;
+        transition: .4s;
+      }
+
+      .rightbtnp:hover {
+        color: green;
+      }
+
+      #ftco-nav {
+        transform: translateX(10px);
+      }
+    }
+  </style>
 </head>
 <body>
- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-white ftco-navbar-light" id="ftco-navbar">
-   <div class="container">
-      <a class="navbar-brand imagebox" href="index.html">
-        <img src="images/logo.jpg.jpg" class="img-fluid w-25" alt=""></span>
-      </a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="oi oi-menu"></span> Menu
-     </button>
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-white ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
 
-     <div class="collapse navbar-collapse" id="ftco-nav">
-       <ul class="navbar-nav ml-auto">
-         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-         <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
-         <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
-         <!-- <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li> -->
-         <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
-         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-       </ul>
-     </div>
-   </div>
- </nav>
- <!-- END nav -->
+			<a class="navbar-brand imagebox" href="index.html">
+				<img src="images/logo.jpg.jpg" class="img-fluid w-25" alt=""></span>
+			</a>
+			<button class="navbar-toggler bg-orange p-2-5" type="button" data-toggle="collapse" data-target="#ftco-nav"
+				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu&nbsp&nbsp<i class="fa-solid fa-bars fa-xl famenu"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<!-- <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="blog.html" class="nav-link">About</a></li>
+					<li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
+					<li class="nav-item"><a href="hotel.html" class="nav-link">Packages</a></li>
+					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
+					<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+					<li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
+					<!-- <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li> -->
+					<!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
+					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+					<li class="nav-item rightbtn"><a href="#" class="nav-link nav-rbtn">
+							<p class="rightbtnp">Pay&nbspUs</p>
+							<p class="rightbtnp">Donate&nbspUs</p>
+						</a></li>
+				</ul>
+			</div>
+		</div>
+</nav>
+<!-- END nav -->
  
- <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg');">
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg');">
   <div class="overlay"></div>
   <div class="container">
     <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -63,17 +155,21 @@
 <section class="ftco-section services-section">
   <div class="container">
     <div class="row d-flex">
-      <div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
-       <div class="w-100">
-        <span class="subheading">Welcome to Pacific</span>
-        <h2 class="mb-4">It's time to start your adventure</h2>
-        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+      <div class="col-md-12 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
+       <div class="w-100 text-center">
+        <span class="subheading">About Capture Kashmir Tour and Travels</span>
+        <h2 class="mb-4">Who are we and what we do?</h2>
+        <p>
+          At Capture Kashmir Tour and Travels, we specialize in curating unforgettable travel experiences in the breathtaking paradise of Kashmir. Our mission is to offer you a seamless journey through the stunning landscapes, rich culture, and warm hospitality that this region has to offer. Whether you're looking to explore the serene beauty of Dal Lake, embark on a thrilling adventure in the mountains, or immerse yourself in the region's vibrant heritage, we have the perfect itinerary for you.
+          <br><br>
+          Our expert team ensures that every moment of your trip is filled with joy, comfort, and discovery. From booking your travel to offering insightful local knowledge, we are committed to providing personalized services that make your trip extraordinary.
+          </p>
+        <p>Our tours may come to an end, but the memories we help create will stay with you forever. Let us be a part of your Kashmir journey, where every view, every experience, and every adventure will be etched in your heart for a lifetime.
         A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
         <p><a href="#" class="btn btn-primary py-3 px-4">Search Destination</a></p>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-12">
      <div class="row">
       <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
         <div class="services services-1 color-1 d-block img" style="background-image: url(images/services-1.jpg);">
@@ -117,7 +213,6 @@
 </div>
 </section>
 
-
 <section class="ftco-section ftco-about img"style="background-image: url(images/kashmirl.webp);">
  <div class="overlay"></div>
  <div class="container py-md-5">
@@ -143,9 +238,32 @@
     <div class="col-md-6 pl-md-5 py-5">
       <div class="row justify-content-start pb-3">
         <div class="col-md-12 heading-section ftco-animate">
-         <span class="subheading">About Us</span>
-         <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+         <h2 class="mb-4">Why Choose Us?</h2>
+         <p>
+          <ul>
+            <li>
+              <strong>Experience: </strong> Years of expert knowledge
+            </li>
+            <li>
+              <strong>Scenic Tours: </strong> Explore breathtaking landscapes
+            </li>
+            <li>
+              <strong>Reliable Transport: </strong> Comfortable, safe rides
+            </li>
+            <li>
+              <strong>Personalized Service: </strong> Tailored itineraries
+            </li>
+            <li>
+              <strong>On-time: </strong>  Punctual and efficient  
+            </li>
+            <li>
+              <strong>24/7 Support: </strong>  Always ready to assist    
+            </li>
+            <li>
+              <strong>Memorable Experiences: </strong>  Capture beautiful moments   
+            </li>
+          </ul>
+         </p>
          <p><a href="#" class="btn btn-primary">Book Your Destination</a></p>
        </div>
      </div>
@@ -308,71 +426,75 @@
 </div>
 </section>
 
-<footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
+<footer class="ftco-footer bg-bottom ftco-no-pt">
   <div class="container">
     <div class="row mb-5">
-      <div class="col-md pt-5">
-        <div class="ftco-footer-widget pt-md-5 mb-4">
-          <h2 class="ftco-heading-2">About</h2>
-          <p>Capture Kashmir takes you on a journey through its stunning valleys, serene lakes, majestic mountains, & enchanting landscapes unveiling paradise’s beauty.</p>
-          <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-            <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
-            <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-            <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
-          </ul>
-        </div>
+    <div class="col-md pt-5">
+      <div class="ftco-footer-widget pt-md-5 mb-4">
+      <h2 class="ftco-heading-2">What we wdo?</h2>
+      <p>We Capture Kashmir Tour and Travels, offering a wide range of services including taxi bookings, hotel accommodations, houseboat bookings, gondola rides, helicopter bookings, customized itineraries, and much more. We strive to provide our customers with seamless and memorable experiences.</p>
+      <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+        <li class="ftco-animate"><a target="_blank" href="https://www.facebook.com/share/15AyCo7jmr/"><span class="fa fa-facebook"></span></a></li>
+        <li class="ftco-animate"><a target="_blank" href="https://www.instagram.com/capture_kashmir_tours?igsh=MTNjYW53c3FmeTJ3OQ=="><span class="fa fa-instagram"></span></a></li>
+      </ul>
       </div>
-      <div class="col-md pt-5 border-left">
-        <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
-          <h2 class="ftco-heading-2">Infromation</h2>
-          <ul class="list-unstyled">
-            <li><a href="#" class="py-2 d-block">Home</a></li>
-            <li><a href="#" class="py-2 d-block">About</a></li>
-            <li><a href="#" class="py-2 d-block">Destination</a></li>
-            <li><a href="#" class="py-2 d-block">Contact</a></li>
-            <!-- <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
-            <li><a href="#" class="py-2 d-block">Call Us</a></li> -->
-          </ul>
-        </div>
+    </div>
+    <div class="col-md pt-5 border-left">
+      <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+      <h2 class="ftco-heading-2">Infromation</h2>
+      <ul class="list-unstyled">
+        <li><a href="/index.html" class="py-2 d-block">Home</a></li>
+        <li><a href="/about.html" class="py-2 d-block">About</a></li>
+        <li><a href="/destination.html" class="py-2 d-block">Destination</a></li>
+        <li><a href="/contact.html" class="py-2 d-block">Contact</a></li>
+        <!-- <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
+        <li><a href="#" class="py-2 d-block">Call Us</a></li> -->
+      </ul>
       </div>
-      <div class="col-md pt-5 border-left">
-        <div class="ftco-footer-widget pt-md-5 mb-4">
-          <h2 class="ftco-heading-2">Packages</h2>
-          <ul class="list-unstyled">
-            <li><a href="#" class="py-2 d-block">Srinagar Splendour</a></li>
-            <li><a href="#" class="py-2 d-block">Valleys Of Kashmir</a></li>
-            <li><a href="#" class="py-2 d-block">Essence Of Kashmir</a></li>
-            <li><a href="#" class="py-2 d-block">Vaishno Devi Trek</a></li>
-            <li><a href="#" class="py-2 d-block">Wild Gurez Escape</a></li>
-            <li><a href="#" class="py-2 d-block">Honeymoon Escape</a></li>
-            <li><a href="#" class="py-2 d-block">Ladakh Expedition</a></li>
-          </ul>
-        </div>
+    </div>
+    <div class="col-md pt-5 border-left">
+      <div class="ftco-footer-widget pt-md-5 mb-4">
+      <h2 class="ftco-heading-2">Packages</h2>
+      <ul class="list-unstyled">
+        <li><a href="#" class="py-2 d-block">Srinagar Splendour</a></li>
+        <li><a href="#" class="py-2 d-block">Valleys Of Kashmir</a></li>
+        <li><a href="#" class="py-2 d-block">Essence Of Kashmir</a></li>
+        <li><a href="#" class="py-2 d-block">Vaishno Devi Trek</a></li>
+        <li><a href="#" class="py-2 d-block">Wild Gurez Escape</a></li>
+        <li><a href="#" class="py-2 d-block">Honeymoon Escape</a></li>
+        <li><a href="#" class="py-2 d-block">Ladakh Expedition</a></li>
+      </ul>
       </div>
-      <div class="col-md pt-5 border-left">
-        <div class="ftco-footer-widget pt-md-5 mb-4">
-          <h2 class="ftco-heading-2">Have a Questions?</h2>
-          <div class="block-23 mb-3">
-            <ul>
-              <li><span class="icon fa fa-map-marker"></span><span class="text">Gulmarg Road Shalteng HMT Srinagar J&K, 190012</span></li>
-              <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">9906518172</span></a></li>
-              <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text" style="overflow-wrap: anywhere;">info@capturekashmirtours.in</span></a></li>
-            </ul>
-          </div>
-        </div>
+    </div>
+    <div class="col-md pt-5 border-left">
+      <div class="ftco-footer-widget pt-md-5 mb-4">
+      <h2 class="ftco-heading-2">Have a Questions?</h2>
+      <div class="block-23 mb-3">
+        <ul>
+        <li><span class="icon fa fa-map-marker"></span><span class="text">Gulmarg Road Shalteng
+          HMT Srinagar J&K, 190012</span></li>
+        <li><a href="#"><span class="icon fa fa-phone"></span><span
+            class="text">9906518172</span></a></li>
+        <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text"
+            style="overflow-wrap: anywhere;">info@capturekashmirtours.in</span></a></li>
+        </ul>
       </div>
+      </div>
+    </div>
     </div>
     <div class="row">
-      <div class="col-md-12 text-center">
-
-        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-        </div>
-      </div>
+    <div class="col-md-12 text-center">
+  
+      <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      Copyright &copy;
+      <script>document.write(new Date().getFullYear());</script> All rights reserved <a href="capturekashmir.com"
+        target="_blank">Capture Kashmir</a>
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      </p>
     </div>
+    </div>
+  </div>
 </footer>
-
 
 
 <!-- loader -->
