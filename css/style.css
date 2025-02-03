@@ -9103,9 +9103,9 @@ h1, h2, h3, h4, h5,
         border-style: solid;
         border-width: 0 0 5px 5px;
         border-color: transparent transparent #c7390d transparent; }
-    .services.services-1 .media-body {
+  .services.services-1 .media-body {
       color: rgba(255, 255, 255, 0.8); }
-      .services.services-1 .media-body h3 {
+  .services.services-1 .media-body h3 {
         color: #fff; }
   .services.color-1:after {
     background: #87b500b0; }
@@ -9986,7 +9986,6 @@ textarea.form-control {
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     border-radius: 2px; }
-
 .sidebar-box {
   margin-bottom: 30px;
   padding: 10px;
