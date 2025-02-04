@@ -103,36 +103,38 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-white ftco-navbar-light" id="ftco-navbar">
-    <div class="container">
+		<div class="container">
 
-      <a class="navbar-brand imagebox" href="index.html">
-        <img src="images/logo.jpg.jpg" class="img-fluid w-25" alt=""></span>
-      </a>
-      <button class="navbar-toggler bg-orange p-2-5" type="button" data-toggle="collapse" data-target="#ftco-nav"
-        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="oi oi-menu"></span> Menu&nbsp&nbsp<i class="fa-solid fa-bars fa-xl famenu"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav ml-auto">
-          <!-- <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+			<a class="navbar-brand imagebox" href="index.html">
+				<img src="images/logo.jpg.jpg" class="img-fluid w-25" alt=""></span>
+			</a>
+			<button class="navbar-toggler bg-orange p-2-5" type="button" data-toggle="collapse" data-target="#ftco-nav"
+				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu&nbsp&nbsp<i class="fa-solid fa-bars fa-xl famenu"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<!-- <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">About</a></li>
 					<li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
 					<li class="nav-item"><a href="hotel.html" class="nav-link">Packages</a></li>
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
-          <!-- <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li> -->
-          <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item rightbtn"><a href="#" class="nav-link nav-rbtn">
-              <p class="rightbtnp">Pay&nbspUs</p>
-              <p class="rightbtnp">Donate&nbspUs</p>
-            </a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+					<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+					<li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
+					<!-- <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li> -->
+					<!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
+					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+					<li class="nav-item rightbtn"><a href="#" class="nav-link nav-rbtn">
+							<p class="rightbtnp" onclick="document.querySelector('.PaymentButton').click()">Pay&nbspNow
+							</p>
+							<p class="rightbtnp" onclick="window.location.href='tel: 9906518172'">Contact&nbspUs</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
   <!-- END nav -->
   <!-- END nav -->
 
@@ -237,11 +239,11 @@
             <p>Book your dream Kashmir experience with us. Complete your payment and let the adventure begin!</p>
             <p class="mb-0 d-flex justify-content-center align-items-center">
 
-            <form class="paymentclass">
-              <script src="https://checkout.razorpay.com/v1/payment-button.js"
-                data-payment_button_id="pl_Pmvy00UtwberdB" async>
-                </script>
-            </form>
+              <form class="paymentclass">
+                <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                  data-payment_button_id="pl_Pmvy00UtwberdB" async>
+                  </script>
+              </form>
 
             </p>
           </div>

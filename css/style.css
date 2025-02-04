@@ -10170,11 +10170,17 @@ textarea.form-control {
       width: 100% !important;
     }
     .razorpay-payment-button:hover a,.razorpay-payment-button:hover .svelte-ekc7fv {
-      background: rgb(35, 113, 236) !important;
+      /* background: none !important; */
       color: white !important;
       fill: white;
       border: none !important;
     }
+    /* .PaymentButton-securedBy {
+      display: none;
+    }
+    .PaymentButton-text.svelte-ekc7fv.svelte-ekc7fv{
+      display: initial;
+    } */
     .svelte-ekc7fv {
       fill: white;
     }

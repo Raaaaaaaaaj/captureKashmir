@@ -20,7 +20,6 @@
 	  
 		setInterval(changeFavicon, 4000); // Change frame every 200ms
 	  </script> -->
-
 	<style>
 		.nav-item {
 			z-index: 1;
@@ -148,9 +147,11 @@
 					<!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 					<li class="nav-item rightbtn"><a href="#" class="nav-link nav-rbtn">
-							<p class="rightbtnp">Pay&nbspUs</p>
-							<p class="rightbtnp">Donate&nbspUs</p>
-						</a></li>
+							<p class="rightbtnp" onclick="document.querySelector('.PaymentButton').click()">Pay&nbspNow
+							</p>
+							<p class="rightbtnp" onclick="window.location.href='tel: 9906518172'">Contact&nbspUs</p>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
