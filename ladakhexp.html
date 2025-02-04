@@ -46,6 +46,88 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+		.nav-item {
+			z-index: 1;
+		}
+
+		.rightbtn {
+			transform: translateX(-6vw);
+			z-index: 0;
+		}
+
+		.rightbtn a {
+			transform: translateX(10vw);
+			/* margin-left: 100px; */
+			display: flex;
+			flex-direction: row;
+		}
+
+		.timespan a {
+			font-weight: bold;
+		}
+
+		.bg-orange {
+			background-color: white !important;
+			/* color: #f15d30 !important; */
+			transform: translate(10px, -3px) !important;
+			/* border: solid 1px #f15d30 !important; */
+			box-shadow: 0 0 0px grey;
+			transition: 1s;
+		}
+
+		.bg-orange:hover {
+			/* background-color:  !important; */
+			color: #f15d30 !important;
+			box-shadow: 0 0 5px grey;
+		}
+
+		.p-2-5 {
+			padding: 10px 10px !important;
+			border-radius: 4px !important;
+		}
+
+		.rightbtnp {
+			margin: -7px 0px 0px 30px;
+			border-radius: 4px;
+			background: #f15d30;
+			padding: 7px 20px;
+			color: white;
+			min-width: 120px;
+			text-align: center;
+
+		}
+
+		@media (max-width: 1027px) {
+			.rightbtn {
+				transform: translate(0, -10px);
+
+			}
+
+			.rightbtn a {
+				flex-direction: column !important;
+				max-width: 200px;
+				transform: translate(0);
+			}
+
+			.rightbtnp {
+				margin: 0;
+				padding: .5rem 0;
+				background: transparent;
+				color: black;
+				text-align: left;
+				transition: .4s;
+			}
+
+			.rightbtnp:hover {
+				color: green;
+			}
+
+			#ftco-nav {
+				transform: translateX(10px);
+			}
+		}
+	</style>
 
 </head>
 
