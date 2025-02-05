@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/style.css">
   <script defer async src='https://cdn.trustindex.io/loader-cert.js?f0324bf40d4249048706245e516'></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <style>
     .nav-item {
       z-index: 1;
@@ -202,23 +203,25 @@
     <div class="container">
       <div class="row block-9">
         <div class="col-md-12 order-md-last d-flex">
-          <form action="#" class="bg-light p-5 contact-form">
+          <form id="contact-form" class="bg-light p-5 contact-form">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" class="form-control" placeholder="Your Name" name="name" required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Email">
+                <input type="email" class="form-control" placeholder="Your Email" name="email" id="email" required>
+                <p id="emailFeedback" class="error"></p>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" class="form-control" placeholder="Subject" name="subject" required>
             </div>
             <div class="form-group">
-              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea cols="30" rows="7" class="form-control" placeholder="Message" name="message" required></textarea>
             </div>
             <div class="form-group text-center">
-              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
             </div>
-          </form>
+        </form>
+        
 
         </div>
 
@@ -349,6 +352,128 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/scrollax.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        emailjs.init("DyZSiX4vJBakraM-t"); // Replace with your EmailJS User ID
+    
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form from reloading the page
+    
+            emailjs.sendForm("service_dn0ic3o", "template_bn1twyr", this)
+                .then(function () {
+                    alert("Message sent successfully!");
+                    document.getElementById("contact-form").reset(); // Clear form after submission
+                }, function (error) {
+                    alert("Failed to send message. Please try again!");
+                    console.error("Error:", error);
+                });
+        });
+    });
+    </script>
+     <script>
+      document.getElementById('email').addEventListener('input', function () {
+          const email = this.value;
+          const feedback = document.getElementById('emailFeedback');
+
+          // Regular expression for validating email format
+          const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+          // Validate basic email format
+          if (!emailRegex.test(email)) {
+              feedback.textContent = "Invalid email format!";
+              feedback.className = 'error';
+              return;
+          }
+
+          // Extract the subdomain (local part before @)
+          const subdomain = email.split('@')[0];
+          const subdomainRegex = /^(?!.*\.\.)(?!.*__)[a-zA-Z0-9]+(?:[._]?[a-zA-Z0-9]+)*$/;
+
+          // Validate subdomain rules
+          if (!subdomainRegex.test(subdomain)) {
+              feedback.textContent = "Subdomain must be alphanumeric, may include '_' or '.', but not consecutively!";
+              feedback.className = 'error';
+              return;
+          }
+
+          // Extract domain part (after @)
+          const domain = email.split('@')[1];
+          const allowedDomains = [
+              "gmail.com", "yahoo.com", "outlook.com", "hotmail.com", "icloud.com", "aol.com", 
+              "protonmail.com", "zoho.com", "mail.com", "gmx.com", "yandex.com", "fastmail.com", 
+              "msn.com", "live.com", "rediffmail.com", "qq.com", "126.com", "163.com", "tutanota.com", 
+              "hushmail.com", "inbox.com", "lycos.com", "me.com", "optonline.net", "comcast.net", 
+              "verizon.net", "att.net", "charter.net", "shaw.ca", "btinternet.com", "sky.com", 
+              "virginmedia.com", "cox.net", "sympatico.ca", "sbcglobal.net", "bellsouth.net", 
+              "earthlink.net", "rogers.com", "frontier.com", "netscape.net", "aim.com", "wanadoo.fr", 
+              "orange.fr", "sfr.fr", "free.fr", "laposte.net", "alice.it", "libero.it", "virgilio.it", 
+              "tiscali.it", "tin.it", "email.it", "poste.it", "teletu.it", "web.de", "t-online.de", 
+              "freenet.de", "gmx.de", "arcor.de", "bluewin.ch", "swissmail.ch", "seznam.cz", 
+              "centrum.cz", "volny.cz", "mail.ru", "bk.ru", "list.ru", "inbox.ru", "rambler.ru", 
+              "ya.ru", "tut.by", "ukr.net", "i.ua", "bigmir.net", "meta.ua", "onet.pl", "o2.pl", 
+              "wp.pl", "interia.pl", "neostrada.pl", "home.pl", "gazeta.pl", "tlen.pl", "op.pl", 
+              "abv.bg", "mail.bg", "dir.bg", "eurodir.bg", "hotmail.co.uk", "yahoo.co.uk", 
+              "live.co.uk", "btconnect.com", "talk21.com", "virgin.net", "ukgateway.net", 
+              "eircom.net", "eir.ie", "hotmail.ca", "yahoo.ca", "sympatico.ca", "rogers.ca", 
+              "bell.net", "videotron.ca", "telus.net", "primus.ca", "shaw.ca", "hotmail.com.au", 
+              "yahoo.com.au", "bigpond.com", "optusnet.com.au", "iinet.net.au", "dodo.com.au", 
+              "internode.on.net", "tpg.com.au", "live.com.au", "aapt.net.au", "westnet.com.au", 
+              "hotmail.co.nz", "yahoo.co.nz", "xtra.co.nz", "ihug.co.nz", "clear.net.nz", 
+              "paradise.net.nz", "vodafone.net.nz", "orcon.net.nz", "slingshot.co.nz", 
+              "hotmail.co.in", "yahoo.co.in", "rediffmail.com", "sify.com", "indiatimes.com", 
+              "airtelmail.in", "vsnl.net", "broadbandindia.com", "reliancemail.com", 
+              "tatateleservices.com", "china.com", "sina.com", "sina.cn", "qq.com", "vip.qq.com", 
+              "foxmail.com", "126.com", "163.com", "yeah.net", "sohu.com", "21cn.com", 
+              "tom.com", "aliyun.com", "aliyun.cn", "sogou.com", "yahoo.com.cn", 
+              "yahoo.com.hk", "yahoo.co.jp", "hotmail.jp", "outlook.jp", "docomo.ne.jp", 
+              "ezweb.ne.jp", "auone.jp", "biglobe.ne.jp", "nifty.com", "ocn.ne.jp", 
+              "ybb.ne.jp", "plala.or.jp", "hotmail.co.kr", "yahoo.co.kr", "naver.com", 
+              "daum.net", "hanmail.net", "korea.com", "dreamwiz.com", "empas.com", 
+              "lycos.co.kr", "live.co.kr", "hotmail.com.mx", "yahoo.com.mx", "prodigy.net.mx", 
+              "live.com.mx", "hotmail.com.ar", "yahoo.com.ar", "fibertel.com.ar", 
+              "ciudad.com.ar", "arnet.com.ar", "hotmail.com.br", "yahoo.com.br", 
+              "bol.com.br", "terra.com.br", "uol.com.br", "ig.com.br", "itelefonica.com.br", 
+              "r7.com", "globo.com", "globomail.com", "oi.com.br", "hotmail.co.za", 
+              "yahoo.co.za", "vodamail.co.za", "mweb.co.za", "telkomsa.net", 
+              "hotmail.com.tr", "yahoo.com.tr", "superonline.com", "ttmail.com", 
+              "turk.net", "posta.net", "hotmail.ru", "yandex.ru", "mail.ru", "bk.ru", 
+              "inbox.ru", "list.ru", "rambler.ru", "land.ru", "pochta.ru", "hotmail.gr", 
+              "yahoo.gr", "otenet.gr", "forthnet.gr", "cytanet.com.cy", "spidernet.com.cy", 
+              "cablenet.com.cy", "primetel.com.cy", "hotmail.ie", "yahoo.ie", "eircom.net", 
+              "oceanfree.net", "indigo.ie", "iol.ie", "hotmail.sg", "yahoo.com.sg", 
+              "pacific.net.sg", "singnet.com.sg", "starhub.net.sg", "m1.com.sg", 
+              "hotmail.my", "yahoo.com.my", "tm.net.my", "jaring.my", "time.net.my", 
+              "hotmail.ph", "yahoo.com.ph", "live.com.ph", "pldt.com", "gmail.ph", 
+              "skydsl.net.ph", "dostmail.com", "hotmail.vn", "yahoo.com.vn", "vnn.vn", 
+              "hcm.fpt.vn", "hcm.vnn.vn", "hanoi.fpt.vn", "saigonnet.vn", "hn.vnn.vn", 
+              "hotmail.id", "yahoo.co.id", "indosat.net.id", "cbn.net.id", 
+              "plasa.com", "telkom.net.id", "biz.net.id", "rad.net.id", 
+              "usatoday.com", "consultant.com", "engineer.com", "accountant.com", 
+              "scientist.com", "teacher.com", "musician.org", "usa.net", 
+              "europe.com", "asia.com", "iname.com", "iname.net", "keemail.me"
+          ];
+
+          // Validate against allowed domains
+          if (!allowedDomains.includes(domain)) {
+              feedback.textContent = `Domain '${domain}' is not allowed!`;
+              feedback.className = 'error';
+              return;
+          }
+
+          // If all checks pass
+          feedback.textContent = "Valid email!";
+          feedback.className = 'valid';
+      });
+
+      // Prevent submission if email is invalid
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+          const feedback = document.getElementById('emailFeedback');
+          if (feedback.textContent !== "Valid email!") {
+              alert("Please enter a valid email before submitting!");
+              event.preventDefault();
+          }
+      });
+  </script>
   <!-- <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
   <script src="js/google-map.js"></script>
