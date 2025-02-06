@@ -23,7 +23,7 @@
 // };
 document.addEventListener("DOMContentLoaded", function () {
     let music = document.getElementById("bgMusic");
-
+    document.querySelector('.rightbtn').click();
     // Check if the audio element already exists
     if (!music) {
         // Create and configure audio element
