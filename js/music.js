@@ -22,39 +22,34 @@
 //     }
 // };
 document.addEventListener("DOMContentLoaded", function () {
-     // Disable scrolling
+    // Create and configure audio element
     const music = document.createElement("audio");
     music.src = "js/bgmusic.mpeg"; 
     music.loop = true;
-    music.autoplay = true;
     music.volume = 0.2;
     document.body.appendChild(music);
 
-    // Ensure the music is loaded before playing
-    music.addEventListener("canplaythrough", function () {
-        let playPromise = music.play();
-        
-        if (playPromise !== undefined) {
-            playPromise.then(() => {
-                console.log("Music is playing...");
-            }).catch((error) => {
-                console.log("Autoplay blocked! Waiting for user interaction.");
-                document.addEventListener("click", () => {
-                    music.play();
-                }, { once: true }); 
+    // Try to play music (Autoplay might be blocked)
+    let playPromise = music.play();
+    if (playPromise !== undefined) {
+        playPromise.catch(() => {
+            console.log("Autoplay blocked! Waiting for user interaction.");
+            document.addEventListener("click", function playMusic() {
+                music.play();
+                document.removeEventListener("click", playMusic); // Remove listener after first play
             });
-        }
-    });
-    // document.getElementById("popupOverlay").classList.add("show");
-	// document.body.classList.add("no-scroll");
-    if (!localStorage.getItem("popupShown")) {
-        document.getElementById("popupOverlay").classList.add("show");
-        document.body.classList.add("no-scroll"); // Disable scrolling
+        });
+    }
 
-        // Store in localStorage to prevent showing again
-        localStorage.setItem("popupShown", "true");
+    // Show popup only if it hasn't been shown before
+    const popupOverlay = document.getElementById("popupOverlay");
+    if (popupOverlay && !localStorage.getItem("popupShown")) {
+        popupOverlay.classList.add("show");
+        document.body.classList.add("no-scroll"); // Disable scrolling
+        localStorage.setItem("popupShown", "true"); // Mark as shown
     }
 });
+
 function setFavicon(url) {
     let link = document.querySelector("link[rel~='icon']");
     
