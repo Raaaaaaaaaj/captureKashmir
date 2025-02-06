@@ -1363,10 +1363,15 @@
 	  </footer>
 	  <script>
 		// Show popup on page load
-		// window.onload = function () {
-		// 	document.getElementById("popupOverlay").classList.add("show");
-		// 	document.body.classList.add("no-scroll"); // Disable scrolling
-		// };
+		window.onload = function () {
+			// if (!localStorage.getItem("popupShown")) {
+			// 	document.getElementById("popupOverlay").classList.add("show");
+			// 	document.body.classList.add("no-scroll"); // Disable scrolling
+
+			// 	// Store in localStorage to prevent showing again
+			// 	localStorage.setItem("popupShown", "true");
+			// }
+		};
 	
 		// Function to close the popup
 		function closePopup() {

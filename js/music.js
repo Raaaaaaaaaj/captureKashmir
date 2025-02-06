@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         if (playPromise !== undefined) {
             playPromise.then(() => {
-                console.log("Music is playing...");
+                console.log("Music is playing in the background...");
             }).catch((error) => {
                 console.log("Autoplay blocked! Waiting for user interaction.");
                 document.addEventListener("click", () => {
@@ -45,8 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
-    document.getElementById("popupOverlay").classList.add("show");
-	document.body.classList.add("no-scroll");
+    if (!sessionStorage.getItem("popupShown")) {
+        document.getElementById("popupOverlay").classList.add("show");
+        document.body.classList.add("no-scroll"); // Disable scrolling
+
+        // Store in sessionStorage to prevent showing again during the session
+        sessionStorage.setItem("popupShown", "true");
+    }
 });
 function setFavicon(url) {
     let link = document.querySelector("link[rel~='icon']");
