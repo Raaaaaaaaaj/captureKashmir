@@ -36,25 +36,27 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Autoplay blocked! Waiting for user interaction.");
             document.addEventListener("click", function playMusic() {
                 music.play();
-                document.removeEventListener("click", playMusic); // Remove listener after first play
-            });
+                // document.removeEventListener("click", playMusic); // Remove listener after first play
+            }, { once: true });
         });
     }
     // popupOverlay.classList.add("show");
     // document.body.classList.add("no-scroll");
     // Show popup only if it hasn't been shown before
-    const popupOverlay = document.getElementById("popupOverlay");
-    if (popupOverlay && !localStorage.getItem("popupShown")) {
-        popupOverlay.classList.add("show");
-        document.body.classList.add("no-scroll"); // Disable scrolling
-        localStorage.setItem("popupShown", "true"); // Mark as shown
-    }
-    // localStorage.removeItem('popupShown');
-});
-setInterval(()=>{
-    localStorage.removeItem('popupShown');
-    console.log('Popup unlocked !');
-}, 3600000);
+//     const popupOverlay = document.getElementById("popupOverlay");
+//     if (popupOverlay && !localStorage.getItem("popupShown")) {
+//         popupOverlay.classList.add("show");
+//         document.body.classList.add("no-scroll"); // Disable scrolling
+//         localStorage.setItem("popupShown", "true"); // Mark as shown
+//     }
+//     // localStorage.removeItem('popupShown');
+// 
+}
+);
+// setInterval(()=>{
+//     localStorage.removeItem('popupShown');
+//     console.log('Popup unlocked !');
+// }, 1000);
 function setFavicon(url) {
     let link = document.querySelector("link[rel~='icon']");
     

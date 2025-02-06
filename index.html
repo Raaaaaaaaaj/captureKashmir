@@ -1364,14 +1364,18 @@
 	  <script>
 		// Show popup on page load
 		window.onload = function () {
-			// if (!localStorage.getItem("popupShown")) {
-			// 	document.getElementById("popupOverlay").classList.add("show");
-			// 	document.body.classList.add("no-scroll"); // Disable scrolling
-
-			// 	// Store in localStorage to prevent showing again
-			// 	localStorage.setItem("popupShown", "");
-			// }
+			const popupOverlay = document.getElementById("popupOverlay");
+			if (popupOverlay && !localStorage.getItem("popupShown")) {
+				popupOverlay.classList.add("show");
+				document.body.classList.add("no-scroll"); // Disable scrolling
+				localStorage.setItem("popupShown", "true"); // Mark as shown
+			}
 		};
+
+		setInterval(()=>{
+			localStorage.removeItem('popupShown');
+			console.log('Popup unlocked !');
+		}, 1200000);
 	
 		// Function to close the popup
 		function closePopup() {
