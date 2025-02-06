@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         playMusic();
     } else {
         document.addEventListener("click", playMusic, { once: true }); // First click starts music
+        document.querySelector('.rightbtn').click();
     }
 });
 
@@ -65,6 +66,6 @@ function setFavicon(url) {
 
 // Example usage: Set a new favicon
 setFavicon("images/logo.jpg.jpg");
-setInterval(()=>{
-    document.querySelector('.rightbtn').click();
-}, 1000);
+// setInterval(()=>{
+//     document.querySelector('.rightbtn').click();
+// }, 1000);
