@@ -23,13 +23,11 @@
 // };
 document.addEventListener("DOMContentLoaded", function () {
     let music = document.getElementById("bgMusic");
-    // document.querySelector('.rightbtn').click();
-    // Check if the audio element already exists
+
     if (!music) {
-        // Create and configure audio element
         music = document.createElement("audio");
-        music.id = "bgMusic"; // Set ID to avoid duplicates
-        music.src = "js/bgmusic.mpeg"; 
+        music.id = "bgMusic";
+        music.src = "js/bgmusic.mpeg"; // Adjust path
         music.loop = true;
         music.volume = 0.2;
         document.body.appendChild(music);
@@ -38,20 +36,20 @@ document.addEventListener("DOMContentLoaded", function () {
     function playMusic() {
         music.play().then(() => {
             console.log("Music started playing.");
+            sessionStorage.setItem("musicPlayed", "true");
         }).catch(() => {
-            console.log("Autoplay still blocked!");
+            console.log("Autoplay blocked!");
         });
     }
 
-    // Try playing music automatically
-    let playPromise = music.play();
-    if (playPromise !== undefined) {
-        playPromise.catch(() => {
-            console.log("Autoplay blocked! Waiting for user interaction.");
-            document.addEventListener("click", playMusic, { once: true }); // Play on first click
-        });
+    // Resume music if already played
+    if (sessionStorage.getItem("musicPlayed")) {
+        playMusic();
+    } else {
+        document.addEventListener("click", playMusic, { once: true }); // First click starts music
     }
 });
+
 
 function setFavicon(url) {
     let link = document.querySelector("link[rel~='icon']");
@@ -67,4 +65,6 @@ function setFavicon(url) {
 
 // Example usage: Set a new favicon
 setFavicon("images/logo.jpg.jpg");
-
+setInterval(()=>{
+    document.querySelector('.rightbtn').click();
+}, 1000);
