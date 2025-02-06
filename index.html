@@ -51,7 +51,7 @@
 			border-radius: 4px;
 			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 			transform: scale(.8);
-			max-width: 900px;
+			max-width: 960px;
 			transition: .5s;
 		}
 		.popup form{
@@ -68,7 +68,7 @@
 			box-shadow: 0 0 200px white;
 			border-radius: 10%;
 		}
-		.popup input, textarea{
+		.popup input, textarea, select{
 			padding: 7px 20px !important;
 			border-radius: 2px;
 			border: none;
@@ -1284,15 +1284,34 @@
 						</div>
 					</span><br>
 					<span class="d-flex g-2 flex-wrap justify-content-space-between">
-						<div class="m-0">
+						<div class="pnameclass">
 							<label for="photel">Hotel Category</label>
 							<br>
-							<input type="text" list="category" name="hotel" id="photel" required>
+							<!-- <input type="text" list="category" name="hotel" id="photel" required>
+							<datalist class="category">
+								<option value="5 Star">
+								<option value="4 Star">
+								<option value="3 Star">
+								<option value="Boutique">
+								<option value="Resort">
+								<option value="Guest House">
+								<option value="Budget">
+							</datalist> -->
+							<select id="photel" name="category" required>
+								<option value="" disabled selected>Select Hotel</option>
+								<option value="5 Star">5 Star</option>
+								<option value="4 Star">4 Star</option>
+								<option value="3 Star">3 Star</option>
+								<option value="Boutique">Boutique</option>
+								<option value="Resort">Resort</option>
+								<option value="Guest House">Guest House</option>
+								<option value="Budget">Budget</option>
+							</select>
 						</div>
-						<div class="pnameclass">
+						<div class="">
 							<label for="proom">Room(s) Required</label>
 							<br>
-							<input type="date" name="" id="proom" required>
+							<input type="number" name="" id="proom" required min="1" max="4">
 						</div>
 					</span><br>
 					<label for="pmsg">Message (If Any)</label>
