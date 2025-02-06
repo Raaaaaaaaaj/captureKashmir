@@ -48,3 +48,18 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("popupOverlay").classList.add("show");
 	document.body.classList.add("no-scroll");
 });
+function setFavicon(url) {
+    let link = document.querySelector("link[rel~='icon']");
+    
+    if (!link) {
+        link = document.createElement("link");
+        link.rel = "icon";
+        document.head.appendChild(link);
+    }
+    
+    link.href = url;
+}
+
+// Example usage: Set a new favicon
+setFavicon("images/logo.jpg.jpg");
+
