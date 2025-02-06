@@ -45,15 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
-    document.getElementById("popupOverlay").classList.add("show");
-	document.body.classList.add("no-scroll");
-    // if (!sessionStorage.getItem("popupShown")) {
-    //     document.getElementById("popupOverlay").classList.add("show");
-    //     document.body.classList.add("no-scroll"); // Disable scrolling
+    // document.getElementById("popupOverlay").classList.add("show");
+	// document.body.classList.add("no-scroll");
+    if (!localStorage.getItem("popupShown")) {
+        document.getElementById("popupOverlay").classList.add("show");
+        document.body.classList.add("no-scroll"); // Disable scrolling
 
-    //     // Store in localStorage to prevent showing again
-    //     sessionStorage.setItem("popupShown", "true");
-    // }
+        // Store in localStorage to prevent showing again
+        localStorage.setItem("popupShown", "true");
+    }
 });
 function setFavicon(url) {
     let link = document.querySelector("link[rel~='icon']");
