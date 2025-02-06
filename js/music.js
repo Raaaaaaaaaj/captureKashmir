@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
-
+    // popupOverlay.classList.add("show");
+    // document.body.classList.add("no-scroll");
     // Show popup only if it hasn't been shown before
     const popupOverlay = document.getElementById("popupOverlay");
     if (popupOverlay && !localStorage.getItem("popupShown")) {
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.add("no-scroll"); // Disable scrolling
         localStorage.setItem("popupShown", "true"); // Mark as shown
     }
+    // localStorage.removeItem('popupShown');
 });
 
 function setFavicon(url) {
