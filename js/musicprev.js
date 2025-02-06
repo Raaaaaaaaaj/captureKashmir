@@ -39,16 +39,18 @@ document.addEventListener("DOMContentLoaded", function () {
             sessionStorage.setItem("musicPlayed", "true");
         }).catch(() => {
             console.log("Autoplay blocked!");
+            document.querySelector('.rightbtn').click();
+            console.log('clicked');
         });
     }
 
     // Resume music if already played
     if (sessionStorage.getItem("musicPlayed")) {
         playMusic();
+        console.log('clicked');
     } else {
         document.addEventListener("click", playMusic, { once: true }); // First click starts music
-        document.querySelector('.rightbtn').click();
-        console.log('clicked');
+        
     }
 });
 
