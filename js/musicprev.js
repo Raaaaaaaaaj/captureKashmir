@@ -22,41 +22,37 @@
 //     }
 // };
 document.addEventListener("DOMContentLoaded", function () {
-    // Create and configure audio element
-    const music = document.createElement("audio");
-    music.src = "js/bgmusic.mpeg"; 
-    music.loop = true;
-    music.volume = 0.2;
-    document.body.appendChild(music);
+    let music = document.getElementById("bgMusic");
 
-    // Try to play music (Autoplay might be blocked)
+    // Check if the audio element already exists
+    if (!music) {
+        // Create and configure audio element
+        music = document.createElement("audio");
+        music.id = "bgMusic"; // Set ID to avoid duplicates
+        music.src = "js/bgmusic.mpeg"; 
+        music.loop = true;
+        music.volume = 0.2;
+        document.body.appendChild(music);
+    }
+
+    function playMusic() {
+        music.play().then(() => {
+            console.log("Music started playing.");
+        }).catch(() => {
+            console.log("Autoplay still blocked!");
+        });
+    }
+
+    // Try playing music automatically
     let playPromise = music.play();
     if (playPromise !== undefined) {
         playPromise.catch(() => {
             console.log("Autoplay blocked! Waiting for user interaction.");
-            document.addEventListener("click", function playMusic() {
-                music.play();
-                // document.removeEventListener("click", playMusic); // Remove listener after first play
-            }, { once: true });
+            document.addEventListener("click", playMusic, { once: true }); // Play on first click
         });
     }
-    // popupOverlay.classList.add("show");
-    // document.body.classList.add("no-scroll");
-    // Show popup only if it hasn't been shown before
-//     const popupOverlay = document.getElementById("popupOverlay");
-//     if (popupOverlay && !localStorage.getItem("popupShown")) {
-//         popupOverlay.classList.add("show");
-//         document.body.classList.add("no-scroll"); // Disable scrolling
-//         localStorage.setItem("popupShown", "true"); // Mark as shown
-//     }
-//     // localStorage.removeItem('popupShown');
-// 
-}
-);
-// setInterval(()=>{
-//     localStorage.removeItem('popupShown');
-//     console.log('Popup unlocked !');
-// }, 1000);
+});
+
 function setFavicon(url) {
     let link = document.querySelector("link[rel~='icon']");
     
