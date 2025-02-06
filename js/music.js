@@ -51,7 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // localStorage.removeItem('popupShown');
 });
-
+setInterval(()=>{
+    localStorage.removeItem('popupShown');
+    console.log('Popup unlocked !');
+}, 3600000);
 function setFavicon(url) {
     let link = document.querySelector("link[rel~='icon']");
     
