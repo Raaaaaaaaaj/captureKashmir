@@ -10208,6 +10208,7 @@ textarea.form-control {
 			transform: translate(-180px, -235px) scale(.75);
 			bottom: auto;
 			position: absolute;
+      z-index: 100000;
 		}
 
 		.social ul {
