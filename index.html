@@ -31,7 +31,7 @@
 			visibility: visible;
 			display: flex;
 			opacity: 1;
-			transition: 5s;
+			transition: 2s;
 		}
 		::placeholder{
 			color: darkslategrey !important;
@@ -39,9 +39,10 @@
 
 		/* Popup Box */
 		.popup {
-			background: linear-gradient(to bottom, rgba(100, 50, 250, 0.4), rgba(250, 10, 20, 0.4));
+			background: rgba(0, 0, 0, 0.4);
+			background: linear-gradient(to bottom, rgba(0, 0, 100, 0.6), rgba(100, 50, 100, 0.4), rgba(100, 50, 0, 0.6));
 			padding: 20px;
-			width: 80%;
+			width: 100%;
 			min-width: 240px;
 			display: flex;
 			opacity: 1;
@@ -50,9 +51,33 @@
 			/* text-align: center; */
 			border-radius: 4px;
 			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-			transform: scale(.8);
-			max-width: 1160px;
-			transition: 1s;
+			transform: scale(.7);
+			max-width: 1600px;
+			transition: .5s;
+		}
+		@media(max-width: 830px){
+			.popup{
+				width: 100%;
+				transform: scale(.9);
+			}
+			input, textarea, select, label, br{
+				font-size: 10px !important;
+			}
+			input[type='text']{
+				max-height: 30px !important;
+			}
+			.popup br{
+				font-size: 0 !important;
+			}
+			h2{
+				font-size: 25px !important;
+			}
+			.popup form span div{
+				margin-left: 0 !important;
+			}
+			.pnameclass{
+				margin-right: 0;
+			}
 		}
 		.popup form{
 			display: flex;
@@ -65,18 +90,24 @@
 			/* text-align: center; */
 		}
 		.popup img{
-			box-shadow: 0 0 200px white;
+			/* box-shadow: inset 0 20px white; */
+			width: 10%;
 			border-radius: 10%;
+			/* position: absolute; */
+			/* transform: translate(1000px, 150px); */
 		}
 		.popup input, textarea, select{
 			padding: 7px 20px !important;
-			border-radius: 2px;
+			border-radius: 4px;
 			border: none;
-			resize: none;
+			resize: none !important;
 			font-size: medium;
 			width: 100%;
-			/* max-width: 600px; */
+			max-width: 700px;
 			background: rgba(250, 250, 250, 0.8) !important;
+		}
+		select{
+			padding: 10px 20px !important;
 		}
 		.popup .pnameclass{
 			margin-right: 70px;
@@ -85,7 +116,7 @@
 			color: white;
 			font-size: 20px;
 		}
-		input:focus, textarea:focus{
+		input:focus, textarea:focus, select:focus{
 			outline: none;
 			border: solid 2px purple !important;
 			background: white !important;
@@ -101,11 +132,20 @@
 			font-size: 50px;
 			cursor: pointer;
 			color: orangered;
+			transition: .5s;
+		}
+		.close-btn:hover{
+			color: white;
+		}
+		.input-group{
+			border-radius: 4px;
+			background: rgba(250, 250, 250, 0.8);
+			max-width: 700px;
 		}
 		.input-group-text{
-			background: rgba(250, 250, 250, 0.8) !important;
+			background: rgba(250, 250, 250, 0) !important;
 			border: none !important;
-			border-radius: 0 !important;
+			border-radius: 200 !important;
 			padding: 5px 20px;
 		}
 		input[type='text']{
@@ -1239,7 +1279,7 @@
 		<div class="overlay" id="popupOverlay">
 			<div class="popup">
 				<span class="close-btn" onclick="closePopup()">×</span>
-				<h2 class="mb-5"><span style="width: 20px;"><img src="images/logo.jpg.jpg" alt="" style="width: 10%;"></span> <span>Book Your Trip Now</span></h2>
+				<h2 class="mb-5"><span style="width: 20px;"><img src="images/logo.jpg.jpg" alt=""></span> <span>Book Your Trip Now</span></h2>
 				<form>
 					<span class="d-flex">
 						<div class="pnameclass">
@@ -1262,25 +1302,25 @@
 					</div>
 					<br>
 					<span class="d-flex g-2 flex-wrap justify-content-space-between">
-						<div class="m-0">
+						<div class="mr-auto">
 							<label for="pcheckin">Check In</label>
 							<br>
 							<input type="date" name="checkin" id="pcheckin" required>
 						</div>
-						<div class="m-auto">
+						<div class="mr-auto">
 							<label for="pcheckout">Check Out</label>
 							<br>
 							<input type="date" name="checkout" id="pcheckout" required>
 						</div>
-						<div class="m-auto">
+						<div class="mr-auto">
 							<label for="padult">Adults (18+)</label>
 							<br>
-							<input type="number" name="adult" id="padult" required style="width: 100px;" min="18">
+							<input type="number" name="adult" id="padult" required style="width: 120px;" min="18">
 						</div>
-						<div class="m-auto">
+						<div class="mr-auto">
 							<label for="pchild">Child(ren) (0-17)</label>
 							<br>
-							<input type="number" name="child" id="pchild" required style="width: 100px;" max="17" min="0">
+							<input type="number" name="child" id="pchild" required style="width: 120px;" max="17" min="0">
 						</div>
 					</span><br>
 					<span class="d-flex g-2 flex-wrap justify-content-space-between">
@@ -1315,7 +1355,8 @@
 						</div>
 					</span><br>
 					<label for="pmsg">Message (If Any)</label>
-					<textarea placeholder="Your Message" name="message" id="pmsg" required></textarea><br>
+					<textarea placeholder="Type Your Short Message Here..." name="message" id="pmsg" required></textarea><br>
+					<input type="button" value="Book Now" id="submitbtn" style="padding: 10px; border-radius: 5px; background-color: #f15d30 !important; color: white; width: 140px; font-size: 20px;">
 				</form>
 			</div>
 		</div>
