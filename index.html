@@ -3,24 +3,115 @@
 
 <head>
 	<link rel="icon" href="images/logo.jpg.jpg">
-	<!-- <script>
-		let faviconIndex = 0;
-		const favicons = [
-		  "images/logo.jpg.jpg",
-		  "images/logo.jpg",
-		]; // Add multiple frames of your GIF
-	  
-		function changeFavicon() {
-		  const link = document.querySelector("link[rel='icon']") || document.createElement("link");
-		  link.rel = "icon";
-		  link.href = favicons[faviconIndex];
-		  document.head.appendChild(link);
-		  faviconIndex = (faviconIndex + 1) % favicons.length;
-		}
-	  
-		setInterval(changeFavicon, 4000); // Change frame every 200ms
-	  </script> -->
 	<style>
+		/* Disable scrolling when popup is open */
+		.no-scroll {
+			overflow: hidden;
+		}
+
+		/* Default state: Popup is hidden */
+		.overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.6);
+			display: flex;
+			visibility: hidden;
+			opacity: 0;
+			justify-content: center;
+			align-items: center;
+			z-index: 1000;
+			transition: 1s;
+		}
+
+		/* Show popup when class is added */
+		.overlay.show {
+			visibility: visible;
+			display: flex;
+			opacity: 1;
+			transition: 5s;
+		}
+		::placeholder{
+			color: #f15d30 !important;
+		}
+
+		/* Popup Box */
+		.popup {
+			background: linear-gradient(to bottom, rgba(100, 50, 250, 0.4), rgba(250, 10, 20, 0.4));
+			padding: 20px;
+			width: 80%;
+			min-width: 240px;
+			display: flex;
+			opacity: 1;
+			justify-content: center;
+			flex-direction: column;
+			/* text-align: center; */
+			border-radius: 4px;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+			transform: scale(.8);
+			max-width: 900px;
+			transition: .5s;
+		}
+		.popup form{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			/* margin: auto; */
+		}
+		.popup h2{
+			color: white;
+			/* text-align: center; */
+		}
+		.popup img{
+			box-shadow: 0 0 200px white;
+			border-radius: 10%;
+		}
+		.popup input, textarea{
+			padding: 7px 20px !important;
+			border-radius: 2px;
+			border: none;
+			resize: none;
+			font-size: medium;
+			width: 100%;
+			/* max-width: 600px; */
+			background: rgba(250, 250, 250, 0.8) !important;
+		}
+		.popup .pnameclass{
+			margin-right: 70px;
+		}
+		label{
+			color: white;
+			font-size: 20px;
+		}
+		input:focus, textarea:focus{
+			outline: none;
+			border: solid 2px purple !important;
+			background: white !important;
+			/* box-shadow: 0 0 1px 1px white !important; */
+			font-size: medium;
+		}
+
+		/* Close Button */
+		.close-btn {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			font-size: 50px;
+			cursor: pointer;
+			color: orangered;
+		}
+		.input-group-text{
+			background: rgba(250, 250, 250, 0.8) !important;
+			border: none !important;
+			border-radius: 0 !important;
+			padding: 5px 20px;
+		}
+		input[type='text']{
+			max-height: 45px;
+		}
+
 		.nav-item {
 			z-index: 1;
 		}
@@ -1145,8 +1236,85 @@
 		  </div>
 		  </div>
 		</div>
+		<div class="overlay" id="popupOverlay">
+			<div class="popup">
+				<span class="close-btn" onclick="closePopup()">×</span>
+				<h2 class="mb-5"><span style="width: 20px;"><img src="images/logo.jpg.jpg" alt="" style="width: 10%;"></span> <span>Book Your Trip Now</span></h2>
+				<form>
+					<span class="d-flex">
+						<div class="pnameclass">
+							<label for="pname">Fullname</label>
+							<br>
+							<input type="text" placeholder="Your Name" name="name" id="pname" required>
+						</div>
+						<div>
+							<label for="pnum">Phone</label>
+							<br>
+							<input type="text" placeholder="Phone Number" name="number" id="pnum" required>
+						</div>
+					</span><br>
+					<label for="pmail">E-mail Adress</label>
+					<input type="email" placeholder="Type Your E-mail" name="email" id="pmail" required><br>
+					<label for="pmail">Your Full Adress</label>
+					<div class="input-group">
+						<span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+						<input type="text" class="form-control" placeholder="Type Your Full Adress">
+					</div>
+					<br>
+					<span class="d-flex g-2 flex-wrap justify-content-space-between">
+						<div class="m-0">
+							<label for="pcheckin">Check In</label>
+							<br>
+							<input type="date" name="checkin" id="pcheckin" required>
+						</div>
+						<div class="m-auto">
+							<label for="pcheckout">Check Out</label>
+							<br>
+							<input type="date" name="checkout" id="pcheckout" required>
+						</div>
+						<div class="m-auto">
+							<label for="padult">Adults (18+)</label>
+							<br>
+							<input type="number" name="adult" id="padult" required style="width: 100px;" min="18">
+						</div>
+						<div class="m-auto">
+							<label for="pchild">Child(ren) (0-17)</label>
+							<br>
+							<input type="number" name="child" id="pchild" required style="width: 100px;" max="17" min="0">
+						</div>
+					</span><br>
+					<span class="d-flex g-2 flex-wrap justify-content-space-between">
+						<div class="m-0">
+							<label for="photel">Hotel Category</label>
+							<br>
+							<input type="text" list="category" name="hotel" id="photel" required>
+						</div>
+						<div class="pnameclass">
+							<label for="proom">Room(s) Required</label>
+							<br>
+							<input type="date" name="" id="proom" required>
+						</div>
+					</span><br>
+					<label for="pmsg">Message (If Any)</label>
+					<textarea placeholder="Your Message" name="message" id="pmsg" required></textarea><br>
+				</form>
+			</div>
+		</div>
 	  </footer>
-	  
+	  <script>
+		// Show popup on page load
+		window.onload = function () {
+			document.getElementById("popupOverlay").classList.add("show");
+			document.body.classList.add("no-scroll"); // Disable scrolling
+		};
+	
+		// Function to close the popup
+		function closePopup() {
+			document.getElementById("popupOverlay").classList.remove("show");
+			document.body.classList.remove("no-scroll"); // Re-enable scrolling
+		}
+	</script>
+
 	<script>
 		document.querySelectorAll('.location').forEach(location => {
 			location.addEventListener('mouseover', () => {

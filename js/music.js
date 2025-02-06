@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     music.src = "js/bgmusic.mpeg"; 
     music.loop = true;
     music.autoplay = true;
-    music.volume = 0.04;
+    music.volume = 0.2;
     document.body.appendChild(music);
 
     // Ensure the music is loaded before playing
