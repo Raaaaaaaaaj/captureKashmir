@@ -24,6 +24,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let music = document.getElementById("bgMusic");
     document.querySelector('.rightbtn').click();
+    console.log('clicked');
     // Check if the audio element already exists
     if (!music) {
         // Create and configure audio element
