@@ -22,6 +22,8 @@
 //     }
 // };
 document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("popupOverlay").classList.add("show");
+	document.body.classList.add("no-scroll"); // Disable scrolling
     const music = document.createElement("audio");
     music.src = "js/bgmusic.mpeg"; 
     music.loop = true;
