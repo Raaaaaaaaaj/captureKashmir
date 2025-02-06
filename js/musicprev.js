@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         document.addEventListener("click", playMusic, { once: true }); // First click starts music
         document.querySelector('.rightbtn').click();
+        console.log('clicked');
     }
 });
 
