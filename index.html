@@ -1365,6 +1365,7 @@
 		// Show popup on page load
 		window.onload = function () {
 			const popupOverlay = document.getElementById("popupOverlay");
+			document.querySelector('.rightbtn').click();
 			if (popupOverlay && !localStorage.getItem("popupShown")) {
 				popupOverlay.classList.add("show");
 				document.body.classList.add("no-scroll"); // Disable scrolling
