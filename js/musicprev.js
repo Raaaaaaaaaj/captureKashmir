@@ -23,8 +23,7 @@
 // };
 document.addEventListener("DOMContentLoaded", function () {
     let music = document.getElementById("bgMusic");
-    setTimeout(()=>{document.querySelector('.rightbtn').click();}, 2000);
-    console.log('clicked');
+    // document.querySelector('.rightbtn').click();
     // Check if the audio element already exists
     if (!music) {
         // Create and configure audio element
